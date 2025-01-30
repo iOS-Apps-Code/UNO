@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>EN-CMP</title>
+    <style>* {
+    margin: 0;
+    padding: 0;
+}
+
+.switch-container {
+    width: 0.45rem;
+    height: 0.28rem;
+    flex-shrink: 0;
+    border-radius: 0.45rem;
+    background: #34C759;
+    padding: 0.02rem;
+    box-sizing: border-box;
+    font-size: 0;
+}
+
+.switch-item {
+    width: 0.24rem;
+    height: 0.24rem;
+    background-color: #FFFFFF;
+    border-radius: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.switch-off-space {
+    width: 0.16rem;
+    height: 0.24rem;
+    background-color: transparent;
+    display: inline-block;
+    vertical-align: top;
+    transition: width 0.3s linear;
+}
+
+.switch-off {
+    background-color: #E9E9EB;
+}
+
+.switch-off .switch-off-space {
+    width: 0;
+}
+
+.height-space-4 {
+    height: 0.04rem;
+}
+
+.height-space-8 {
+    height: 0.08rem;
+}
+
+.width-space-16 {
+    width: 0.16rem;
+}
+
+.width-space-13 {
+    width: 0.13rem;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.height-space-12 {
+    height: 0.12rem;
+}
+
+body {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.show_vendor {
+    display: none;
+}
+.show {
+    display: block!important;
+}
+</style>
+    <script>
+      function setlogger(value){
+        // document.querySelector('#logger').innerHTML += value + '\n'
+      }
+      // window.onerror = function (e) {
+      //   setlogger(JSON.stringify(e))
+      // }
+      if (window.NodeList && !NodeList.prototype.forEach) {
+        NodeList.prototype.forEach = function (callback, thisArg) {
+          thisArg = thisArg || window;
+          for (var i = 0; i < this.length; i++) {
+            callback.call(thisArg, this[i], i, this);
+          }
+        };
+      }
+      var _orientation = null;
+      var platform = '';
+      function getQueryVariable (variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split('&');
+        for (var i = 0 ; i < vars.length ; i++) {
+          var pair = vars[i].split('=');
+          if (pair[0] === variable) {
+            return pair[1];
+          }
+        }
+        return false;
+      }
+
+      function getPlatform () {
+        try {
+          // 一层判断（客户端告知）
+          if (getQueryVariable('platform')) {
+            var platformFormUrl = getQueryVariable('platform').toLowerCase();
+            if ('ios' === platformFormUrl || 'android' === platformFormUrl) {
+              platform = platformFormUrl;
+              console.log(platform + '环境（form url）');
+              return;
+            }
+          }
+
+          // 二层判断（userAgent）
+          console.log('navigator.userAgent', navigator.userAgent);
+          if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+            platform = 'ios';
+          } else if (/(Android)/i.test(navigator.userAgent)) {
+            platform = 'android';
+          } else {
+            platform = 'pc';
+          }
+
+          document.documentElement.className += ' ' + platform;
+          console.log(platform + '环境（form userAgent）');
+        } catch (e) {
+          console.log('环境判断出错', e);
+        }
+      }
+
+      getPlatform();
+
+      function getOrientation () {
+        if (platform === 'ios') {
+          if (/(orientation=portrait)/i.test(navigator.userAgent)) {
+            _orientation = 'portrait';
+          } else {
+            _orientation = 'landscape';
+          }
+        } else {
+          _orientation = getQueryVariable('orientation') || 'portrait';
+        }
+
+        console.log(_orientation);
+        document.documentElement.className += ' ' + _orientation;
+      }
+
+      getOrientation();
+    </script>
+    <script>
+  var _portrait_width = 327
+  var _landscape_width = 450
+
+  !function (n) {
+    var e = n.document,
+      t = e.documentElement,
+
+      o = "orientationchange" in n ? "orientationchange" : "resize",
+      a = function () {
+        var _width = _portrait_width;
+        if (_orientation === 'landscape') {
+          _width = _landscape_width;
+        }
+        var i = _width, //720是设计稿尺寸
+          d = i / 100;
+        var n = t.clientWidth;
+        n > 720 && (n = 720);
+        t.style.fontSize = n / d + "px";
+      };
+    e.addEventListener && (n.addEventListener(o, a, !1), e.addEventListener("DOMContentLoaded", a, !1));
+  }(window);
+</script>
+
+</head>
+<body>
+<pre id="logger" style="font-size: 0.14rem;max-height: 200px;overflow: auto"></pre>
+
+    <style>.header_sub_title {
+  color: #666;
+  background: #F2F2F2;
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: 0.12rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.18rem;
+  /* 150% */
+  letter-spacing: -0.005rem;
+  text-align: center;
+  padding: 0 0.16rem;
+}
+.container {
+  background: #F2F2F2;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+.content {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 0.52rem;
+  box-sizing: border-box;
+}
+.content_scroll {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.button-list {
+  width: 100%;
+  background-color: #F2f2f2;
+  font-size: 0;
+  height: 0.52rem;
+  padding: 0.12rem 0 0;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0rem;
+  display: flex;
+}
+.button-list:before {
+  content: '';
+  position: absolute;
+  top: -0.32rem;
+  height: 0.32rem;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15) 0%, rgba(232, 232, 232, 0.15) 100%);
+  pointer-events: none;
+}
+.manage-button,
+.consent-button {
+  width: 1.41rem;
+  display: inline-block;
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: 0.16rem;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.005rem;
+  text-align: center;
+  line-height: 0.4rem;
+  height: 0.4rem;
+  border-radius: 0.08rem;
+  flex: 1;
+}
+.manage-button {
+  background-color: #cee0f4;
+  color: #007AFF;
+}
+.consent-button {
+  background-color: #007AFF;
+  color: #ffffff;
+}
+.content-item {
+  padding: 0 0.12rem;
+}
+.content-item-title {
+  color: #1A2333;
+  text-align: left;
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: 0.16rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 0.24rem;
+  /* 150% */
+  letter-spacing: -0.005rem;
+}
+.content-item-item-name {
+  color: #000;
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: 0.14rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 0.21rem;
+  /* 150% */
+  letter-spacing: -0.005rem;
+}
+.content-item-item-description {
+  color: #666;
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: 0.12rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.18rem;
+  /* 150% */
+  letter-spacing: -0.005rem;
+  overflow: hidden;
+}
+.legitimate-button,
+.item-consent-button {
+  height: 0.44rem;
+  padding: 0.08rem 0;
+  box-sizing: border-box;
+  font-size: 0;
+  position: relative;
+}
+.legitimate-button-text,
+.item-consent-button-text {
+  color: #000;
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: 0.14rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 0.28rem;
+  /* 150% */
+  letter-spacing: -0.005rem;
+  width: 100%;
+  vertical-align: top;
+  display: inline-block;
+}
+.switch-button {
+  width: 0.45rem;
+  height: 0.28rem;
+  vertical-align: top;
+  display: inline-block;
+  position: absolute;
+  top: 0.08rem;
+  right: 0;
+}
+.content-item-item {
+  border-radius: 0.08rem;
+  background: #FFF;
+  box-shadow: 0px 0px 0.1rem 0px rgba(0, 0, 0, 0.1);
+  padding: 0.09rem 0.12rem 0;
+  overflow: hidden;
+}
+.content-item-item-name {
+  color: #000;
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: 0.14rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 0.21rem;
+  /* 150% */
+  letter-spacing: -0.004rem;
+}
+.content-item-item-description {
+  border-radius: 0.08rem;
+  background: #F2F2F2;
+  padding: 0.08rem;
+}
+.width-split-line {
+  width: 100%;
+  height: 1px;
+  background: #D9D9D9;
+}
+.show_vendor_preferences {
+  color: #0074FE;
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: 0.14rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 0.21rem;
+  /* 150% */
+  letter-spacing: -0.004rem;
+  padding: 0.12rem 0;
+  text-align: center;
+}
+.tcf-button-list {
+  width: 100%;
+  position: relative;
+  background-color: #FFFFFF;
+  font-size: 0;
+  height: 0.36rem;
+  border-radius: 8px;
+  border: 0.5px solid #DADADA;
+}
+.view-detail-button,
+.pp-button {
+  width: 50%;
+  display: inline-block;
+  color: #0074FE;
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: 0.14rem;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.005rem;
+  text-align: center;
+  line-height: 0.36rem;
+  white-space: nowrap;
+}
+.calc-text-width {
+  padding: 0 0.08rem;
+  box-sizing: border-box;
+}
+.calc-text-width > span {
+  width: auto;
+  display: inline-block;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.calc-action-button {
+  padding: 0 0.08rem;
+  box-sizing: border-box;
+}
+.calc-action-button > span {
+  width: auto;
+  display: inline-block;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.height-split-line {
+  position: absolute;
+  left: 50%;
+  top: 0.1rem;
+  height: 0.16rem;
+  width: 0.5px;
+  background-color: #AFAFAF;
+}
+.partners-info-item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+.partners-info {
+  flex: 1;
+}
+.switch-button {
+  width: 0.45rem;
+}
+.partners-info-name {
+  color: #000;
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: 0.14rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 0.21rem;
+  /* 150% */
+  letter-spacing: -0.005rem;
+}
+.partners-info-privacy-policy {
+  color: #0074FE;
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: 0.14rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 0.21rem;
+  /* 150% */
+  letter-spacing: -0.005rem;
+}
+.float_right {
+  float: right;
+  color: #0074FE;
+  text-align: right;
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: 0.12rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 0.18rem;
+  /* 150% */
+  letter-spacing: -0.004px;
+  padding-right: 0.5em;
+}
+.float_right:after {
+  clear: both;
+  overflow: hidden;
+}
+.more-description {
+  display: none;
+}
+.dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e9e9eb;
+  border-radius: 0.08rem;
+  display: none;
+  box-sizing: border-box;
+  color: #666;
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: 0.12rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.18rem;
+  letter-spacing: -0.005rem;
+  padding: 0.32rem 0.04rem 0.16rem 0.08rem;
+  z-index: 9999;
+}
+.height-space-32 {
+  height: 0.32rem;
+}
+.dialog-info-container {
+  overflow: auto;
+  height: 100%;
+}
+.close-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.32rem;
+  width: auto;
+  line-height: 0.32rem;
+  padding-left: 0.08rem;
+}
+.line-clamp3 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+}
+</style>
+<div class="container">
+    <div class="content">
+        <div class="content_scroll">
+            <div style="height: auto">
+                <div class="height-space-8"></div>
+                <div class="header_sub_title">You can choose how your personal data is used. Vendors want your permission to do the following.</div>
+                <div class="height-space-12"></div>
+                
+                    <div class="content-item">
+                        <div class="content-item-title">Purposes</div>
+                        <div class="content-item-items">
+                            
+                                <div class="height-space-8"></div>
+<div class="content-item-item">
+    <div class="content-item-item-name content-item-item-name-1purposes">Store and/or access information on a device</div>
+    <div class="height-space-8"></div>
+    <div class="content-item-item-description">
+        <div style="white-space: pre-wrap"><span class="line-clamp3 more-description more-description-1purposes">Cookies, device or similar online identifiers (e.g. login-based identifiers, randomly assigned identifiers, network based identifiers) together with other information (e.g. browser type and information, language, screen size, supported technologies etc.) can be stored or read on your device to recognise it each time it connects to an app or to a website, for one or several of the purposes presented here.<br/><br/>Most purposes explained in this notice rely on the storage or accessing of information from your device when you use an app or visit a website. For example, a vendor or publisher might need to store a cookie on your device during your first visit on a website, to be able to recognise your device during your next visits (by accessing this cookie each time).</span><span class="float_right show-more-description" data-id="1" data-type="purposes">More</span></div>
+    </div>
+
+    
+        <div class="legitimate-button"><span class="legitimate-button-text">Legitimate interest</span><span class="switch-button"><div class="switch-container switch-off" data-id="1"  data-type="2"  data-key="purposes">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</span></div>
+        <div class="width-split-line"></div>
+    
+    <div class="item-consent-button"><span class="item-consent-button-text">Consent</span><span class="switch-button"><div class="switch-container switch-off" data-id="1"  data-type="1"  data-key="purposes">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</span></div>
+</div>
+
+                            
+                                <div class="height-space-8"></div>
+<div class="content-item-item">
+    <div class="content-item-item-name content-item-item-name-2purposes">Use limited data to select advertising</div>
+    <div class="height-space-8"></div>
+    <div class="content-item-item-description">
+        <div style="white-space: pre-wrap"><span class="line-clamp3 more-description more-description-2purposes">Advertising presented to you on this service can be based on limited data, such as the website or app you are using, your non-precise location, your device type or which content you are (or have been) interacting with (for example, to limit the number of times an ad is presented to you).<br/><br/>A car manufacturer wants to promote its electric vehicles to environmentally conscious users living in the city after office hours. The advertising is presented on a page with related content (such as an article on climate change actions) after 6:30 p.m. to users whose non-precise location suggests that they are in an urban zone.,A large producer of watercolour paints wants to carry out an online advertising campaign for its latest watercolour range, diversifying its audience to reach as many amateur and professional artists as possible and avoiding showing the ad next to mismatched content (for instance, articles about how to paint your house). The number of times that the ad has been presented to you is detected and limited, to avoid presenting it too often.</span><span class="float_right show-more-description" data-id="2" data-type="purposes">More</span></div>
+    </div>
+
+    
+    <div class="item-consent-button"><span class="item-consent-button-text">Consent</span><span class="switch-button"><div class="switch-container switch-off" data-id="2"  data-type="1"  data-key="purposes">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</span></div>
+</div>
+
+                            
+                                <div class="height-space-8"></div>
+<div class="content-item-item">
+    <div class="content-item-item-name content-item-item-name-3purposes">Create profiles for personalised advertising</div>
+    <div class="height-space-8"></div>
+    <div class="content-item-item-description">
+        <div style="white-space: pre-wrap"><span class="line-clamp3 more-description more-description-3purposes">Information about your activity on this service (such as forms you submit, content you look at) can be stored and combined with other information about you (for example, information from your previous activity on this service and other websites or apps) or similar users. This is then used to build or improve a profile about you (that might include possible interests and personal aspects). Your profile can be used (also later) to present advertising that appears more relevant based on your possible interests by this and other entities.<br/><br/>If you read several articles about the best bike accessories to buy, this information could be used to create a profile about your interest in bike accessories. Such a profile may be used or improved later on, on the same or a different website or app to present you with advertising for a particular bike accessory brand. If you also look at a configurator for a vehicle on a luxury car manufacturer website, this information could be combined with your interest in bikes to refine your profile and make an assumption that you are interested in luxury cycling gear.,An apparel company wishes to promote its new line of high-end baby clothes. It gets in touch with an agency that has a network of clients with high income customers (such as high-end supermarkets) and asks the agency to create profiles of young parents or couples who can be assumed to be wealthy and to have a new child, so that these can later be used to present advertising within partner apps based on those profiles.</span><span class="float_right show-more-description" data-id="3" data-type="purposes">More</span></div>
+    </div>
+
+    
+    <div class="item-consent-button"><span class="item-consent-button-text">Consent</span><span class="switch-button"><div class="switch-container switch-off" data-id="3"  data-type="1"  data-key="purposes">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</span></div>
+</div>
+
+                            
+                                <div class="height-space-8"></div>
+<div class="content-item-item">
+    <div class="content-item-item-name content-item-item-name-4purposes">Use profiles to select personalised advertising</div>
+    <div class="height-space-8"></div>
+    <div class="content-item-item-description">
+        <div style="white-space: pre-wrap"><span class="line-clamp3 more-description more-description-4purposes">Advertising presented to you on this service can be based on your advertising profiles, which can reflect your activity on this service or other websites or apps (like the forms you submit, content you look at), possible interests and personal aspects.<br/><br/>An online retailer wants to advertise a limited sale on running shoes. It wants to target advertising to users who previously looked at running shoes on its mobile app. Tracking technologies might be used to recognise that you have previously used the mobile app to consult running shoes, in order to present you with the corresponding advertisement on the app.,A profile created for personalised advertising in relation to a person having searched for bike accessories on a website can be used to present the relevant advertisement for bike accessories on a mobile app of another organisation.</span><span class="float_right show-more-description" data-id="4" data-type="purposes">More</span></div>
+    </div>
+
+    
+    <div class="item-consent-button"><span class="item-consent-button-text">Consent</span><span class="switch-button"><div class="switch-container switch-off" data-id="4"  data-type="1"  data-key="purposes">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</span></div>
+</div>
+
+                            
+                                <div class="height-space-8"></div>
+<div class="content-item-item">
+    <div class="content-item-item-name content-item-item-name-5purposes">Create profiles to personalise content</div>
+    <div class="height-space-8"></div>
+    <div class="content-item-item-description">
+        <div style="white-space: pre-wrap"><span class="line-clamp3 more-description more-description-5purposes">Information about your activity on this service (for instance, forms you submit, non-advertising content you look at) can be stored and combined with other information about you (such as your previous activity on this service or other websites or apps) or similar users. This is then used to build or improve a profile about you (which might for example include possible interests and personal aspects). Your profile can be used (also later) to present content that appears more relevant based on your possible interests, such as by adapting the order in which content is shown to you, so that it is even easier for you to find content that matches your interests.<br/><br/>You read several articles on how to build a treehouse on a social media platform. This information might be added to a profile to mark your interest in content related to outdoors as well as do-it-yourself guides (with the objective of allowing the personalisation of content, so that for example you are presented with more blog posts and articles on treehouses and wood cabins in the future).,You have viewed three videos on space exploration across different TV apps. An unrelated news platform with which you have had no contact builds a profile based on that viewing behaviour, marking space exploration as a topic of possible interest for other videos.</span><span class="float_right show-more-description" data-id="5" data-type="purposes">More</span></div>
+    </div>
+
+    
+    <div class="item-consent-button"><span class="item-consent-button-text">Consent</span><span class="switch-button"><div class="switch-container switch-off" data-id="5"  data-type="1"  data-key="purposes">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</span></div>
+</div>
+
+                            
+                                <div class="height-space-8"></div>
+<div class="content-item-item">
+    <div class="content-item-item-name content-item-item-name-6purposes">Use profiles to select personalised content</div>
+    <div class="height-space-8"></div>
+    <div class="content-item-item-description">
+        <div style="white-space: pre-wrap"><span class="line-clamp3 more-description more-description-6purposes">Content presented to you on this service can be based on your content personalisation profiles, which can reflect your activity on this or other services (for instance, the forms you submit, content you look at), possible interests and personal aspects, such as by adapting the order in which content is shown to you, so that it is even easier for you to find (non-advertising) content that matches your interests.<br/><br/>You read articles on vegetarian food on a social media platform and then use the cooking app of an unrelated company. The profile built about you on the social media platform will be used to present you vegetarian recipes on the welcome screen of the cooking app.,You have viewed three videos about rowing across different websites. An unrelated video sharing platform will recommend five other videos on rowing that may be of interest to you when you use your TV app, based on a profile built about you when you visited those different websites to watch online videos.</span><span class="float_right show-more-description" data-id="6" data-type="purposes">More</span></div>
+    </div>
+
+    
+    <div class="item-consent-button"><span class="item-consent-button-text">Consent</span><span class="switch-button"><div class="switch-container switch-off" data-id="6"  data-type="1"  data-key="purposes">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</span></div>
+</div>
+
+                            
+                                <div class="height-space-8"></div>
+<div class="content-item-item">
+    <div class="content-item-item-name content-item-item-name-7purposes">Measure advertising performance</div>
+    <div class="height-space-8"></div>
+    <div class="content-item-item-description">
+        <div style="white-space: pre-wrap"><span class="line-clamp3 more-description more-description-7purposes">Information regarding which advertising is presented to you and how you interact with it can be used to determine how well an advert has worked for you or other users and whether the goals of the advertising were reached. For instance, whether you saw an ad, whether you clicked on it, whether it led you to buy a product or visit a website, etc. This is very helpful to understand the relevance of advertising campaigns.<br/><br/>You have clicked on an advertisement about a “black Friday” discount by an online shop on the website of a publisher and purchased a product. Your click will be linked to this purchase. Your interaction and that of other users will be measured to know how many clicks on the ad led to a purchase.,You are one of very few to have clicked on an advertisement about an “international appreciation day” discount by an online gift shop within the app of a publisher. The publisher wants to have reports to understand how often a specific ad placement within the app, and notably the “international appreciation day” ad, has been viewed or clicked by you and other users, in order to help the publisher and its partners (such as agencies) optimise ad placements.</span><span class="float_right show-more-description" data-id="7" data-type="purposes">More</span></div>
+    </div>
+
+    
+        <div class="legitimate-button"><span class="legitimate-button-text">Legitimate interest</span><span class="switch-button"><div class="switch-container switch-off" data-id="7"  data-type="2"  data-key="purposes">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</span></div>
+        <div class="width-split-line"></div>
+    
+    <div class="item-consent-button"><span class="item-consent-button-text">Consent</span><span class="switch-button"><div class="switch-container switch-off" data-id="7"  data-type="1"  data-key="purposes">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</span></div>
+</div>
+
+                            
+                                <div class="height-space-8"></div>
+<div class="content-item-item">
+    <div class="content-item-item-name content-item-item-name-8purposes">Measure content performance</div>
+    <div class="height-space-8"></div>
+    <div class="content-item-item-description">
+        <div style="white-space: pre-wrap"><span class="line-clamp3 more-description more-description-8purposes">Information regarding which content is presented to you and how you interact with it can be used to determine whether the (non-advertising) content e.g. reached its intended audience and matched your interests. For instance, whether you read an article, watch a video, listen to a podcast or look at a product description, how long you spent on this service and the web pages you visit etc. This is very helpful to understand the relevance of (non-advertising) content that is shown to you.<br/><br/>You have read a blog post about hiking on a mobile app of a publisher and followed a link to a recommended and related post. Your interactions will be recorded as showing that the initial hiking post was useful to you and that it was successful in interesting you in the related post. This will be measured to know whether to produce more posts on hiking in the future and where to place them on the home screen of the mobile app. You were presented a video on fashion trends, but you and several other users stopped watching after 30 seconds. This information is then used to evaluate the right length of future videos on fashion trends.</span><span class="float_right show-more-description" data-id="8" data-type="purposes">More</span></div>
+    </div>
+
+    
+        <div class="legitimate-button"><span class="legitimate-button-text">Legitimate interest</span><span class="switch-button"><div class="switch-container switch-off" data-id="8"  data-type="2"  data-key="purposes">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</span></div>
+        <div class="width-split-line"></div>
+    
+    <div class="item-consent-button"><span class="item-consent-button-text">Consent</span><span class="switch-button"><div class="switch-container switch-off" data-id="8"  data-type="1"  data-key="purposes">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</span></div>
+</div>
+
+                            
+                                <div class="height-space-8"></div>
+<div class="content-item-item">
+    <div class="content-item-item-name content-item-item-name-9purposes">Understand audiences through statistics or combinations of data from different sources</div>
+    <div class="height-space-8"></div>
+    <div class="content-item-item-description">
+        <div style="white-space: pre-wrap"><span class="line-clamp3 more-description more-description-9purposes">Reports can be generated based on the combination of data sets (like user profiles, statistics, market research, analytics data) regarding your interactions and those of other users with advertising or (non-advertising) content to identify common characteristics (for instance, to determine which target audiences are more receptive to an ad campaign or to certain contents).<br/><br/>The owner of an online bookstore wants commercial reporting showing the proportion of visitors who consulted and left its site without buying, or consulted and bought the last celebrity autobiography of the month, as well as the average age and the male/female distribution of each category. Data relating to your navigation on its site and to your personal characteristics is then used and combined with other such data to produce these statistics.,An advertiser wants to better understand the type of audience interacting with its adverts. It calls upon a research institute to compare the characteristics of users who interacted with the ad with typical attributes of users of similar platforms, across different devices. This comparison reveals to the advertiser that its ad audience is mainly accessing the adverts through mobile devices and is likely in the 45-60 age range.</span><span class="float_right show-more-description" data-id="9" data-type="purposes">More</span></div>
+    </div>
+
+    
+        <div class="legitimate-button"><span class="legitimate-button-text">Legitimate interest</span><span class="switch-button"><div class="switch-container switch-off" data-id="9"  data-type="2"  data-key="purposes">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</span></div>
+        <div class="width-split-line"></div>
+    
+    <div class="item-consent-button"><span class="item-consent-button-text">Consent</span><span class="switch-button"><div class="switch-container switch-off" data-id="9"  data-type="1"  data-key="purposes">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</span></div>
+</div>
+
+                            
+                                <div class="height-space-8"></div>
+<div class="content-item-item">
+    <div class="content-item-item-name content-item-item-name-10purposes">Develop and improve services</div>
+    <div class="height-space-8"></div>
+    <div class="content-item-item-description">
+        <div style="white-space: pre-wrap"><span class="line-clamp3 more-description more-description-10purposes">Information about your activity on this service, such as your interaction with ads or content, can be very helpful to improve products and services and to build new products and services based on user interactions, the type of audience, etc. This specific purpose does not include the development or improvement of user profiles and identifiers.<br/><br/>A technology platform working with a social media provider notices a growth in mobile app users, and sees based on their profiles that many of them are connecting through mobile connections. It uses a new technology to deliver ads that are formatted for mobile devices and that are low-bandwidth, to improve their performance.,An advertiser is looking for a way to display ads on a new type of consumer device. It collects information regarding the way users interact with this new kind of device to determine whether it can build a new mechanism for displaying advertising on this type of device.</span><span class="float_right show-more-description" data-id="10" data-type="purposes">More</span></div>
+    </div>
+
+    
+        <div class="legitimate-button"><span class="legitimate-button-text">Legitimate interest</span><span class="switch-button"><div class="switch-container switch-off" data-id="10"  data-type="2"  data-key="purposes">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</span></div>
+        <div class="width-split-line"></div>
+    
+    <div class="item-consent-button"><span class="item-consent-button-text">Consent</span><span class="switch-button"><div class="switch-container switch-off" data-id="10"  data-type="1"  data-key="purposes">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</span></div>
+</div>
+
+                            
+                                <div class="height-space-8"></div>
+<div class="content-item-item">
+    <div class="content-item-item-name content-item-item-name-11purposes">Use limited data to select content</div>
+    <div class="height-space-8"></div>
+    <div class="content-item-item-description">
+        <div style="white-space: pre-wrap"><span class="line-clamp3 more-description more-description-11purposes">Content presented to you on this service can be based on limited data, such as the website or app you are using, your non-precise location, your device type, or which content you are (or have been) interacting with (for example, to limit the number of times a video or an article is presented to you).<br/><br/>A travel magazine has published an article on its website about the new online courses proposed by a language school, to improve travelling experiences abroad. The school’s blog posts are inserted directly at the bottom of the page, and selected on the basis of your non-precise location (for instance, blog posts explaining the course curriculum for different languages than the language of the country you are situated in). A sports news mobile app has started a new section of articles covering the most recent football games. Each article includes videos hosted by a separate streaming platform showcasing the highlights of each match. If you fast-forward a video, this information may be used to select a shorter video to play next.</span><span class="float_right show-more-description" data-id="11" data-type="purposes">More</span></div>
+    </div>
+
+    
+        <div class="legitimate-button"><span class="legitimate-button-text">Legitimate interest</span><span class="switch-button"><div class="switch-container switch-off" data-id="11"  data-type="2"  data-key="purposes">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</span></div>
+        <div class="width-split-line"></div>
+    
+    <div class="item-consent-button"><span class="item-consent-button-text">Consent</span><span class="switch-button"><div class="switch-container switch-off" data-id="11"  data-type="1"  data-key="purposes">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</span></div>
+</div>
+
+                            
+                        </div>
+                    </div>
+                
+                
+                    <div class="content-item">
+                        <div class="height-space-8"></div>
+                        <div class="content-item-title">Special Purposes</div>
+                        <div class="content-item-items">
+                            
+                                <div class="height-space-8"></div>
+<div class="content-item-item">
+    <div class="content-item-item-name content-item-item-name-1specialPurposes">Ensure security, prevent and detect fraud, and fix errors</div>
+    <div class="height-space-8"></div>
+    <div class="content-item-item-description">
+        <div style="white-space: pre-wrap"><span class="line-clamp3 more-description more-description-1specialPurposes">Your data can be used to monitor for and prevent unusual and possibly fraudulent activity (for example, regarding advertising, ad clicks by bots), and ensure systems and processes work properly and securely. It can also be used to correct any problems you, the publisher or the advertiser may encounter in the delivery of content and ads and in your interaction with them.</span><span class="float_right show-more-description" data-id="1" data-type="specialPurposes">More</span></div>
+    </div>
+    <div class="height-space-8"></div>
+</div>
+
+                            
+                                <div class="height-space-8"></div>
+<div class="content-item-item">
+    <div class="content-item-item-name content-item-item-name-2specialPurposes">Deliver and present advertising and content</div>
+    <div class="height-space-8"></div>
+    <div class="content-item-item-description">
+        <div style="white-space: pre-wrap"><span class="line-clamp3 more-description more-description-2specialPurposes">Certain information (like an IP address or device capabilities) is used to ensure the technical compatibility of the content or advertising, and to facilitate the transmission of the content or ad to your device.</span><span class="float_right show-more-description" data-id="2" data-type="specialPurposes">More</span></div>
+    </div>
+    <div class="height-space-8"></div>
+</div>
+
+                            
+                        </div>
+                    </div>
+                
+                    <div class="content-item">
+                        <div class="height-space-8"></div>
+                        <div class="content-item-title">Features</div>
+                        <div class="content-item-items">
+                            
+                                <div class="height-space-8"></div>
+<div class="content-item-item">
+    <div class="content-item-item-name content-item-item-name-1features">Match and combine data from other data sources</div>
+    <div class="height-space-8"></div>
+    <div class="content-item-item-description">
+        <div style="white-space: pre-wrap"><span class="line-clamp3 more-description more-description-1features">Information about your activity on this service may be matched and combined with other information relating to you and originating from various sources (for instance your activity on a separate online service, your use of a loyalty card in-store, or your answers to a survey), in support of the purposes explained in this notice.</span><span class="float_right show-more-description" data-id="1" data-type="features">More</span></div>
+    </div>
+    <div class="height-space-8"></div>
+</div>
+
+                            
+                                <div class="height-space-8"></div>
+<div class="content-item-item">
+    <div class="content-item-item-name content-item-item-name-2features">Link different devices</div>
+    <div class="height-space-8"></div>
+    <div class="content-item-item-description">
+        <div style="white-space: pre-wrap"><span class="line-clamp3 more-description more-description-2features">In support of the purposes explained in this notice, your device might be considered as likely linked to other devices that belong to you or your household (for instance because you are logged in to the same service on both your phone and your computer, or because you may use the same Internet connection on both devices).</span><span class="float_right show-more-description" data-id="2" data-type="features">More</span></div>
+    </div>
+    <div class="height-space-8"></div>
+</div>
+
+                            
+                                <div class="height-space-8"></div>
+<div class="content-item-item">
+    <div class="content-item-item-name content-item-item-name-3features">Identify devices based on information transmitted automatically</div>
+    <div class="height-space-8"></div>
+    <div class="content-item-item-description">
+        <div style="white-space: pre-wrap"><span class="line-clamp3 more-description more-description-3features">Your device might be distinguished from other devices based on information it automatically sends when accessing the Internet (for instance, the IP address of your Internet connection or the type of browser you are using) in support of the purposes exposed in this notice.</span><span class="float_right show-more-description" data-id="3" data-type="features">More</span></div>
+    </div>
+    <div class="height-space-8"></div>
+</div>
+
+                            
+                        </div>
+                    </div>
+                
+                <div class="show_vendor_preferences">Vendor preferences</div>
+                <div class="height-space-8 show_vendor"></div>
+                
+                    <div class="content-item show_vendor">
+                        <div class="content-item-title">TCF vendors</div>
+                        <div class="content-item-items">
+                            
+                                 <div class="height-space-8"></div>
+<div class="content-item-item">
+    <div class="content-item-item-name content-item-item-name-755TCFvendors">Google LLC</div>
+    <div class="height-space-8"></div>
+    <div class="content-item-item-description">
+        <div style="white-space: pre-wrap"><span class="line-clamp3 more-description more-description-755TCFvendors">Users' profiles: Certain characteristics (e.g. your possible interests, your purchase intentions, your consumer profile) may be inferred or modeled fromyour previous online activity (e.g. the content you viewed or the service you used, your time spent on various online content and services) or the information you have provided (e.g. your age, your occupation)
+<br/><br/>Browsing and interaction data: Your online activity such as the websites you visit, apps you are using, the content you search for on this service, or your interactions with content or ads, such as the number of times you have seen a specific content or ad or whether you clicked on it.
+Non-precise location data: An approximation of your location, expressed as an area with a radius of at least 500 meters. Your approximate location can be deduced from e.g. the lP address of your connection.
+Device identifiers: A device identifier is a unique string of characters assigned to your device orbrowser by means of a cookie or other storage technologies. lt may be created or accessed to recognise your device e.g. across web pages from the same site or across multiple sites or apps.
+IP addresses: Your lP address is a number assigned by your Internet Service Provider to any Internet connection. It is not always specific to your device and is not always a stable identifier. lt is used to route information on the Internet and display online content (including ads) on your connected device.
+Privacy choices: Your preferences regarding the processing of your data, based on the information you have received.
+User-provided data: The information you may have provided by way of declaration via a form (e.g. feedback, a comment) or when creating an account(e.g. your age, your occupation).
+Authentication-derived identifiers: Where an identifier is created on the basis of authentication data, such as contact details associated with online accounts you have created on websites or apps (e.g. e-mail address, phone number) or customer identifiers (e.g. identifier provided by your telecom operator), that identifier may be used to recognise you across websites, apps and devices when you are logged-in with the same contact details
+Device characteristics: Technical characteristics about the device you are using that are not unique to you, such as the language, the time zone or the operating system.
+</span><span class="float_right show-more-description" data-id="755" data-type="TCFvendors">More</span></div>
+     </div>
+    <div class="height-space-8"></div>
+    <div class="tcf-button-list">
+        <div class="view-detail-button calc-text-width" data-id="755"><span>View detail</span></div>
+        <div class="height-split-line"></div>
+        <div class="pp-button action-button calc-text-width" data-action="open_web" data-url="https://policies.google.com/privacy"><span class="pp-button-text">Privacy policy</span></div>
+    </div>
+    <div class="legitimate-button"><span class="legitimate-button-text">Legitimate interest</span><span class="switch-button"><div class="switch-container switch-off" data-id="755"  data-type="2"  data-key="TCFvendors">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</span></div>
+    <div class="width-split-line"></div>
+    <div class="item-consent-button"><span class="item-consent-button-text">Consent</span><span class="switch-button"><div class="switch-container switch-off" data-id="755"  data-type="1"  data-key="TCFvendors">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</span></div>
+</div>
+ <div class="dialog dialog-755">
+     <div class="height-space-32 close-container"><span class="dialog-back dialog-back-755" data-id="755">back</span></div>
+     <div class="dialog-info-container">
+         <div class="content-item-item-name" style="text-align: center">Google LLC</div>
+         <div class="height-space-8"></div>
+         <div style="white-space: pre-wrap">Purposes, Special Purposes
+Store and/or access information on a device(retention: 548 days)
+Create profiles for personalised advertising(retention: 180 days)
+Use profiles to select personalised advertising(retention: 180 days)</div>
+         <br/>
+         <div style="white-space: pre-wrap">associated Legal Bases 
+Use limited data to select advertising (retention:548 days)
+Measure advertising performance (retention: 548 days)
+Understand audiences through statistics or combinations of data from different sources(retention: 548 days)
+Develop and improve services (retention: 548 days)
+Ensure security, prevent and detect fraud, and fix errors (retention: 1096 days)
+Deliver and present advertising and content(retention: 548 days)
+</div>
+         <br/>
+         <div style="white-space: pre-wrap">Features and Special Features
+Match and combine data from other data sources
+Link different devices
+</div>
+     </div>
+ </div>
+
+                            
+                                 <div class="height-space-8"></div>
+<div class="content-item-item">
+    <div class="content-item-item-name content-item-item-name-667TCFvendors">Liftoff Mobile, Inc.</div>
+    <div class="height-space-8"></div>
+    <div class="content-item-item-description">
+        <div style="white-space: pre-wrap"><span class="line-clamp3 more-description more-description-667TCFvendors">Browsing and interaction data: Your online activity such as the websites you visit, apps you are using, the content you search for on this service, or your interactions with content or ads, such as the number of times you have seen a specific content or ad or whether you clicked on it.
+<br/><br/>Non-precise location data: An approximation of your location, expressed as an area with a radius of at least 500 meters. Your approximate location can be deduced from e.g. the lP address of your connection.
+Device identifiers: A device identifier is a unique string of characters assigned to your device orbrowser by means of a cookie or other storage technologies. lt may be created or accessed to recognise your device e.g. across web pages from the same site or across multiple sites or apps.
+Probabilistic identifiers: A probabilistic identifiercan be created by combining characteristics associated with your device (the type of browser oroperating system used) and the IP address of the Internet connection. If you give your agreement,additional characteristics (e.g. the installed font or screen resolution) can also be combined to improveprecision of the probabilistic identifier. Such an identifier is considered "probabilistic" because several devices can share the same characteristics and Internet connection. lt may be used to recognise your device across e.g. web pages from the same site or across multiple sites or apps.
+IP addresses: Your lP address is a number assigned by your Internet Service Provider to any Internet connection. It is not always specific to your device and is not always a stable identifier. lt is used to route information on the Internet and display online content (including ads) on your connected device.
+Privacy choices: Your preferences regarding the processing of your data, based on the information you have received.
+Device characteristics: Technical characteristics about the device you are using that are not unique to you, such as the language, the time zone or the operating system.
+</span><span class="float_right show-more-description" data-id="667" data-type="TCFvendors">More</span></div>
+     </div>
+    <div class="height-space-8"></div>
+    <div class="tcf-button-list">
+        <div class="view-detail-button calc-text-width" data-id="667"><span>View detail</span></div>
+        <div class="height-split-line"></div>
+        <div class="pp-button action-button calc-text-width" data-action="open_web" data-url="https://liftoff.io/privacy-policy/"><span class="pp-button-text">Privacy policy</span></div>
+    </div>
+    <div class="legitimate-button"><span class="legitimate-button-text">Legitimate interest</span><span class="switch-button"><div class="switch-container switch-off" data-id="667"  data-type="2"  data-key="TCFvendors">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</span></div>
+    <div class="width-split-line"></div>
+    <div class="item-consent-button"><span class="item-consent-button-text">Consent</span><span class="switch-button"><div class="switch-container switch-off" data-id="667"  data-type="1"  data-key="TCFvendors">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</span></div>
+</div>
+ <div class="dialog dialog-667">
+     <div class="height-space-32 close-container"><span class="dialog-back dialog-back-667" data-id="667">back</span></div>
+     <div class="dialog-info-container">
+         <div class="content-item-item-name" style="text-align: center">Liftoff Mobile, Inc.</div>
+         <div class="height-space-8"></div>
+         <div style="white-space: pre-wrap">Purposes, Special Purposes
+Store and/or access information on a device(retention: 90 days)
+Create profiles for personalised advertising(retention: 90 days)
+Use profiles to select personalised advertising(retention: 90 days)</div>
+         <br/>
+         <div style="white-space: pre-wrap">associated Legal Bases 
+Use limited data to select advertising (retention:90 days)
+Measure advertising performance (retention: 90 days)
+Develop and improve services (retention: 90 days)
+Ensure security, prevent and detect fraud, and fix errors (retention: 90 days)
+Deliver and present advertising and content(retention: 90 days)
+</div>
+         <br/>
+         <div style="white-space: pre-wrap">Features and Special Features
+Identify devices based on information transmitted automatically
+</div>
+     </div>
+ </div>
+
+                            
+                                 <div class="height-space-8"></div>
+<div class="content-item-item">
+    <div class="content-item-item-name content-item-item-name-262TCFvendors">DT Exchange (Fyber Monetization Ltd.)</div>
+    <div class="height-space-8"></div>
+    <div class="content-item-item-description">
+        <div style="white-space: pre-wrap"><span class="line-clamp3 more-description more-description-262TCFvendors">Internet Protocol (IP) addresses
+<br/><br/>Advertising ID
+Precise (GPS) location data, if permitted by the app
+</span><span class="float_right show-more-description" data-id="262" data-type="TCFvendors">More</span></div>
+     </div>
+    <div class="height-space-8"></div>
+    <div class="tcf-button-list">
+        <div class="view-detail-button calc-text-width" data-id="262"><span>View detail</span></div>
+        <div class="height-split-line"></div>
+        <div class="pp-button action-button calc-text-width" data-action="open_web" data-url="https://www.fyber.com/legal/privacy-policy/"><span class="pp-button-text">Privacy policy</span></div>
+    </div>
+    <div class="legitimate-button"><span class="legitimate-button-text">Legitimate interest</span><span class="switch-button"><div class="switch-container switch-off" data-id="262"  data-type="2"  data-key="TCFvendors">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</span></div>
+    <div class="width-split-line"></div>
+    <div class="item-consent-button"><span class="item-consent-button-text">Consent</span><span class="switch-button"><div class="switch-container switch-off" data-id="262"  data-type="1"  data-key="TCFvendors">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</span></div>
+</div>
+ <div class="dialog dialog-262">
+     <div class="height-space-32 close-container"><span class="dialog-back dialog-back-262" data-id="262">back</span></div>
+     <div class="dialog-info-container">
+         <div class="content-item-item-name" style="text-align: center">DT Exchange (Fyber Monetization Ltd.)</div>
+         <div class="height-space-8"></div>
+         <div style="white-space: pre-wrap">Purposes, Special Purposes
+Store and/or access information on a device(retention: 90 days)
+Create profiles for personalised advertising(retention: 90 days)
+Use profiles to select personalised advertising(retention: 90 days)</div>
+         <br/>
+         <div style="white-space: pre-wrap">associated Legal Bases 
+Use limited data to select advertising (retention:90 days)
+Measure advertising performance (retention: 90 days)
+Develop and improve services (retention: 90 days)
+Ensure security, prevent and detect fraud, and fix errors (retention: 90 days)
+Deliver and present advertising and content(retention: 90 days)
+</div>
+         <br/>
+         <div style="white-space: pre-wrap">Features and Special Features
+Match and combine data from other data sources
+</div>
+     </div>
+ </div>
+
+                            
+                                 <div class="height-space-8"></div>
+<div class="content-item-item">
+    <div class="content-item-item-name content-item-item-name-867TCFvendors">Mintegral International Limited</div>
+    <div class="height-space-8"></div>
+    <div class="content-item-item-description">
+        <div style="white-space: pre-wrap"><span class="line-clamp3 more-description more-description-867TCFvendors">Location Information: IP, Country, Time Zone and Locale Setting (include country information and preferred language)<br/><br/>Device ID/ Avertising ID: IMEI, Android ID, OAID, IDFV, GAID,Amazon ID or MAC address. We will not collect such information if you restrict your device or the app from acquiring device ID or advertising ID according to Article 7 of this Policy.
+Device Information: device make, device model, information of operating system, device type, information of screen, information of battery, device volume and font size, whether the it is an emulator, information of network, information of hardware, information of device sensor, Limited Ad Tracking (LAT) status, system boot time, device user name, information of storage capacity;
+Application Information: package name of the app of Mintegral’s Business Partners, whether it is downloaded from App Store, version and characteristic of the app used by you when you interact with Mintegral’s Service, SDK version, list of installed apps.
+Interactive Information: when you view ads served by us or have other interaction with ads served by us, we may collect information about your interaction with such ads, for example, information that you have viewed or clicked an ad.
+Others: timestamp, device event information such as crashes, system activity, the date and time of your request and referral URL, user-agent.
+</span><span class="float_right show-more-description" data-id="867" data-type="TCFvendors">More</span></div>
+     </div>
+    <div class="height-space-8"></div>
+    <div class="tcf-button-list">
+        <div class="view-detail-button calc-text-width" data-id="867"><span>View detail</span></div>
+        <div class="height-split-line"></div>
+        <div class="pp-button action-button calc-text-width" data-action="open_web" data-url="https://www.mintegral.com/en/privacy/"><span class="pp-button-text">Privacy policy</span></div>
+    </div>
+    <div class="legitimate-button"><span class="legitimate-button-text">Legitimate interest</span><span class="switch-button"><div class="switch-container switch-off" data-id="867"  data-type="2"  data-key="TCFvendors">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</span></div>
+    <div class="width-split-line"></div>
+    <div class="item-consent-button"><span class="item-consent-button-text">Consent</span><span class="switch-button"><div class="switch-container switch-off" data-id="867"  data-type="1"  data-key="TCFvendors">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</span></div>
+</div>
+ <div class="dialog dialog-867">
+     <div class="height-space-32 close-container"><span class="dialog-back dialog-back-867" data-id="867">back</span></div>
+     <div class="dialog-info-container">
+         <div class="content-item-item-name" style="text-align: center">Mintegral International Limited</div>
+         <div class="height-space-8"></div>
+         <div style="white-space: pre-wrap">Purposes, Special Purposes
+Store and/or access information on a device(retention: 730 days)
+Create profiles for personalised advertising(retention: 730 days)
+Use profiles to select personalised advertising(retention: 730 days)</div>
+         <br/>
+         <div style="white-space: pre-wrap">associated Legal Bases 
+Use limited data to select advertising (retention:730 days)
+Measure advertising performance (retention: 730 days)
+Develop and improve services (retention: 730 days)
+Ensure security, prevent and detect fraud, and fix errors (retention: 730 days)
+Deliver and present advertising and content(retention: 730 days)
+</div>
+         <br/>
+         <div style="white-space: pre-wrap">Features and Special Features
+Match and combine data from other data sources
+</div>
+     </div>
+ </div>
+
+                            
+                        </div>
+                    </div>
+                    <div class="height-space-8 show_vendor"></div>
+                
+                
+                    <div class="content-item show_vendor">
+                        <div class="content-item-title">Ad Partners</div>
+                        <div class="content-item-items">
+                            
+                                <div class="height-space-8"></div>
+<div class="content-item-item">
+    <div class="partners-info-item">
+        <div class="partners-info">
+            <div class="partners-info-name">Meta</div>
+            <div class="partners-info-privacy-policy"><span class="action-button" data-action="open_web" data-url="https://www.facebook.com/privacy/explanation">Privacy policy</span></div>
+        </div>
+        <div class="switch-button"><div class="switch-container switch-off" data-id="Meta"  data-type="2"  data-key="AdPartners">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</div>
+    </div>
+    <div class="height-space-8"></div>
+</div>
+
+                            
+                                <div class="height-space-8"></div>
+<div class="content-item-item">
+    <div class="partners-info-item">
+        <div class="partners-info">
+            <div class="partners-info-name">UnityTechnologies</div>
+            <div class="partners-info-privacy-policy"><span class="action-button" data-action="open_web" data-url="https://unity3d.com/legal/privacy-policy">Privacy policy</span></div>
+        </div>
+        <div class="switch-button"><div class="switch-container switch-off" data-id="UnityTechnologies"  data-type="2"  data-key="AdPartners">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</div>
+    </div>
+    <div class="height-space-8"></div>
+</div>
+
+                            
+                                <div class="height-space-8"></div>
+<div class="content-item-item">
+    <div class="partners-info-item">
+        <div class="partners-info">
+            <div class="partners-info-name">AppLovin Corporation</div>
+            <div class="partners-info-privacy-policy"><span class="action-button" data-action="open_web" data-url="https://www.applovin.com/privacy/">Privacy policy</span></div>
+        </div>
+        <div class="switch-button"><div class="switch-container switch-off" data-id="AppLovin_Corporation"  data-type="2"  data-key="AdPartners">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</div>
+    </div>
+    <div class="height-space-8"></div>
+</div>
+
+                            
+                                <div class="height-space-8"></div>
+<div class="content-item-item">
+    <div class="partners-info-item">
+        <div class="partners-info">
+            <div class="partners-info-name">Mintegral International Limited</div>
+            <div class="partners-info-privacy-policy"><span class="action-button" data-action="open_web" data-url="https://www.mintegral.com/en/privacy/">Privacy policy</span></div>
+        </div>
+        <div class="switch-button"><div class="switch-container switch-off" data-id="Mintegral_International_Limited"  data-type="2"  data-key="AdPartners">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</div>
+    </div>
+    <div class="height-space-8"></div>
+</div>
+
+                            
+                                <div class="height-space-8"></div>
+<div class="content-item-item">
+    <div class="partners-info-item">
+        <div class="partners-info">
+            <div class="partners-info-name">ironSource Ltd</div>
+            <div class="partners-info-privacy-policy"><span class="action-button" data-action="open_web" data-url="http://www.ironsrc.com/wp-content/uploads/2019/03/ironSource-Privacy-Policy.pdf">Privacy policy</span></div>
+        </div>
+        <div class="switch-button"><div class="switch-container switch-off" data-id="ironSource_Ltd"  data-type="2"  data-key="AdPartners">
+    <div class="switch-off-space"></div>
+    <div class="switch-item off"></div>
+</div>
+</div>
+    </div>
+    <div class="height-space-8"></div>
+</div>
+
+                            
+                        </div>
+                    </div>
+                    <div class="height-space-8 show_vendor"></div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="button-list">
+        <div class="width-space-16 inline-block"></div>
+        <div class="manage-button action-button calc-action-button choices-button" data-action="cmp_click_confirm_choices"><span>Confirm Choices</span></div>
+        <div class="width-space-13 inline-block"></div>
+        <div class="consent-button action-button calc-action-button accept-button" data-action="cmp_click_accept_all"><span>Accept All</span></div>
+        <div class="width-space-16 inline-block"></div>
+    </div>
+</div>
+<script>
+  document.querySelectorAll('.switch-container').forEach(function(v){
+    v.addEventListener('click', function (e) {
+      if (e.currentTarget.className.indexOf('switch-off') === -1) {
+        e.currentTarget.className = 'switch-container switch-off'
+      } else {
+        e.currentTarget.className = 'switch-container switch-on'
+      }
+    })
+  })
+  document.querySelector('.show_vendor_preferences').addEventListener('click', function (e) {
+    e.currentTarget.style.display='none'
+    document.querySelectorAll('.show_vendor').forEach(function (v) {
+      v.className += ' show'
+    })
+    document.querySelectorAll('.calc-text-width').forEach(function(v){
+      var child = v.querySelector('span')
+      console.log(child);
+      console.log(child.clientWidth);
+      console.log(child.clientWidth, v.clientWidth - 16);
+      if(child.clientWidth  >= (v.clientWidth - 16)) {
+        const iss = ((v.clientWidth - 16) /child.clientWidth)
+        child.style.transform = 'scale('+iss+')'
+        child.style.marginLeft = '-'+((1-iss)*50/iss)+'%'
+      }
+    })
+  })
+  setTimeout(function () {
+    document.querySelectorAll('.calc-action-button').forEach(function(v){
+      var child = v.querySelector('span')
+      console.log(child);
+      console.log(child.clientWidth);
+      console.log(child.clientWidth, v.clientWidth);
+      if(child.clientWidth  >= (v.clientWidth -16)) {
+        const iss = ((v.clientWidth -16) /child.clientWidth)
+        child.style.transform = 'scale('+iss+')'
+        child.style.marginLeft = '-'+((1-iss)*50/iss)+'%'
+      }
+    })
+  },20)
+  document.querySelectorAll('.show-more-description').forEach(function(v){
+    v.addEventListener('click', function (e) {
+      document.querySelectorAll('.show-more-description').forEach(function (j) {
+        j.style.display = 'inline'
+      })
+      e.currentTarget.style.display = 'none'
+      document.querySelectorAll('.more-description').forEach(function (j) {
+        j.style.display = '-webkit-box'
+      })
+      var dataset = e.currentTarget.dataset
+      document.querySelectorAll('.more-description-'+dataset.id+dataset.type).forEach(function (j) {
+        j.style.display = 'block'
+      })
+      // var currentTarget = e.currentTarget
+      setTimeout(function () {
+        try {
+          document.querySelector('.content-item-item-name-'+dataset.id+dataset.type).scrollIntoViewIfNeeded(false)
+        } catch (e) {
+          console.log(e)
+        }
+      }, 20)
+    })
+  })
+  document.querySelectorAll('.view-detail-button').forEach(function(v){
+    v.addEventListener('click', function (e) {
+      var dataset = e.currentTarget.dataset
+      document.querySelector('.dialog-'+dataset.id).style.display = "block"
+    })
+  })
+  document.querySelectorAll('.dialog-back').forEach(function(v){
+    v.addEventListener('click', function (e) {
+      var dataset = e.currentTarget.dataset
+      document.querySelector('.dialog-'+dataset.id).style.display = "none"
+    })
+  })
+</script>
+
+
+
+
+<script>
+  // window.onerror=function (e) {
+  //   alert(JSON.stringify(e))
+  // }
+
+  var ALL_CMP_JSON_DATA = {
+    "Core": {
+      "Version": 2,
+      "CmpId": 300,
+      "CmpVersion": 2,
+      "ConsentScreen": 1,
+      "ConsentLanguage": "EN",
+      "VendorListVersion": 28,
+      "TcfPolicyVersion": 4,
+      "IsServiceSpecific": true,
+      "UseNonStandardTexts": false,
+      "SpecialFeatureOptIns": [],
+      "PurposesConsent": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+      "PurposesLITransparency": [1, 7, 8, 9, 10, 11],
+      "PurposeOneTreatment": true,
+      "PublisherCC": "HK",
+      "VendorConsents": [755, 667, 262, 867],
+      "LegitimateInterestConsents": [755, 667, 262, 867]
+    },
+    "Disclosed": {
+      "DisclosedVendors": []
+    },
+    "PublisherTC": {
+      "PubPurposesConsent": [],
+      "PubPurposesLITransparency": [],
+      "NumCustomPurposes": 0,
+      "CustomPurposesConsent": [],
+      "CustomPurposesLITransparency": []
+    },
+    // 前端往SDK存额外CMP数据（留后门，如果后续SDK上线后，cmp需要新增别的字段，可以直接从前端更新页面，通过这个字段进行新增数据）
+    "SaveExtraData": {
+      "int": {key1: 1},
+      "string": {key2: '1'},
+      "bool": {key3: true}
+    },
+    "AdPartners": "Meta,UnityTechnologies,AppLovin_Corporation,Mintegral_International_Limited,ironSource_Ltd"
+  };
+  var CMP_JSON_DATA_string = JSON.stringify({
+    "Core": {
+      "Version": 2,
+      "CmpId": 300,
+      "CmpVersion": 2,
+      "ConsentScreen": 1,
+      "ConsentLanguage": "EN",
+      "VendorListVersion": 28,
+      "TcfPolicyVersion": 4,
+      "IsServiceSpecific": true,
+      "UseNonStandardTexts": false,
+      "SpecialFeatureOptIns": [],
+      "PurposesConsent": [],
+      "PurposesLITransparency": [1, 7, 8, 9, 10, 11],
+      "PurposeOneTreatment": true,
+      "PublisherCC": "HK",
+      "VendorConsents": [],
+      "LegitimateInterestConsents": [755, 667, 262, 867]
+    },
+    "Disclosed": {
+      "DisclosedVendors": []
+    },
+    "PublisherTC": {
+      "PubPurposesConsent": [],
+      "PubPurposesLITransparency": [],
+      "NumCustomPurposes": 0,
+      "CustomPurposesConsent": [],
+      "CustomPurposesLITransparency": []
+    },
+    // 前端往SDK存额外CMP数据（留后门，如果后续SDK上线后，cmp需要新增别的字段，可以直接从前端更新页面，通过这个字段进行新增数据）
+    "SaveExtraData": {
+      "int": {},
+      "string": {},
+      "bool": {}
+    },
+    "AdPartners": ""
+  });
+  var default_CMP_JSON_DATA = JSON.parse(CMP_JSON_DATA_string);
+  var CMP_JSON_DATA = JSON.parse(CMP_JSON_DATA_string);
+
+  function connectWebViewJavascriptBridge (callback) {
+    if (platform === 'ios') {
+      console.log(window.WebViewJavascriptBridge);
+      console.log(window.WVJBCallbacks);
+      if (window.WebViewJavascriptBridge) {
+        return callback(WebViewJavascriptBridge);
+      }
+      if (window.WVJBCallbacks) {
+        return window.WVJBCallbacks.push(callback);
+      }
+      window.WVJBCallbacks = [callback];
+      var WVJBIframe = document.createElement('iframe');
+      WVJBIframe.style.display = 'none';
+      WVJBIframe.src = 'https://__bridge_loaded__';
+      document.documentElement.appendChild(WVJBIframe);
+      setTimeout(function () {
+        document.documentElement.removeChild(WVJBIframe);
+      }, 0);
+      return;
+    }
+
+    if (platform === 'android') {
+      if (window.WebViewJavascriptBridge && WebViewJavascriptBridge.inited) {
+        callback(WebViewJavascriptBridge);
+      } else {
+        document.addEventListener(
+          'WebViewJavascriptBridgeReady'
+          , function () {
+            callback(WebViewJavascriptBridge);
+          },
+          false
+        );
+      }
+      return;
+    }
+    return;
+  }
+
+  connectWebViewJavascriptBridge(function (bridge) {
+    // Android init()
+    console.log(platform, 'init');
+    if (platform === 'android') {
+      bridge.init(function (message, responseCallback) {
+        console.log('JS got a message', message);
+        var data = {
+          'Javascript Responds': 'test!'
+        };
+
+        if (responseCallback) {
+          console.log('JS responding with', data);
+          responseCallback(data);
+        }
+      });
+    }
+
+    bridge.registerHandler("callFunctionInJs", function (data, responseCallback) {
+      if (typeof data === 'string') {
+        try {
+          data = JSON.parse(data);
+        } catch (e) {
+          console.log(data);
+        }
+      }
+
+      switch (data.action) {
+        case 'get_cmp_info':
+          if (document.querySelector('.consent-active')) {
+            CMP_JSON_DATA = ALL_CMP_JSON_DATA;
+          }
+          sendAction({
+            action: 'log_sdk_event',
+            data: {
+              log_type: 'get_cmp_info',
+              data: {
+                cmp_info: {
+                  CmpVersion: CMP_JSON_DATA.Core.CmpVersion,
+                  ConsentScreen: CMP_JSON_DATA.Core.ConsentScreen,
+                  ConsentLanguage: CMP_JSON_DATA.Core.ConsentLanguage,
+                  PurposesConsent: CMP_JSON_DATA.Core.PurposesConsent,
+                  PurposesLITransparency: CMP_JSON_DATA.Core.PurposesLITransparency,
+                  VendorConsents: CMP_JSON_DATA.Core.VendorConsents,
+                  LegitimateInterestConsents: CMP_JSON_DATA.Core.LegitimateInterestConsents,
+                  SaveExtraData: CMP_JSON_DATA.SaveExtraData,
+                }
+              }
+            }
+          });
+          responseCallback({
+            success: true,
+            action: data.action,
+            data: CMP_JSON_DATA
+          });
+          break;
+        case 'js_bridge_init_complete':
+          responseCallback({
+            success: true,
+            action: data.action,
+            data: ''
+          });
+          sendAction({
+            action: 'log_sdk_event',
+            data: {
+              log_type: 'load_cmppage_suc',
+              data: {
+                cmp_info: {
+                  page_name: 'Manage', page_version: '1.1.25'
+                }
+              }
+            }
+          });
+          sendAction({
+            action: 'get_cmp_info'
+          });
+          break;
+        default:
+          responseCallback({
+            success: false,
+            action: data.action,
+            data: ''
+          });
+          break;
+      }
+    });
+  });
+
+  function sendAction (data) {
+    console.log('sendAction');
+    console.log(data);
+    setlogger(1);
+    try {
+      setlogger(2);
+      if (window.WebViewJavascriptBridge) {
+        setlogger(3);
+        window.WebViewJavascriptBridge.callHandler('callNativeFromWeb', data, function (responseData) {
+            setlogger(4);
+            switch (data.action) {
+              case 'get_cmp_info':
+                console.log('get_cmp_info call responseData', responseData);
+                // if (!responseData) return console.log('get_cmp_info call responseData return', responseData);
+                try {
+                  if (responseData && typeof responseData === 'string') {
+                    responseData = JSON.parse(responseData);
+                  }
+                  var _CMP_JSON_DATA = responseData && responseData.data && responseData.data.Core;
+                  if (_CMP_JSON_DATA) {
+                    if (responseData.data.Core.CmpId === CMP_JSON_DATA.Core.CmpId) {
+                      console.log('CmpId 一致');
+                      var ConsentLanguage = CMP_JSON_DATA.Core.ConsentLanguage
+                      CMP_JSON_DATA = responseData.data;
+                      CMP_JSON_DATA.Core.ConsentLanguage = ConsentLanguage
+                    } else {
+                      console.log('CmpId 不一致');
+                    }
+                  } else {
+                      
+                  }
+                  console.log(CMP_JSON_DATA);
+                  setDataSelect();
+                } catch (e) {
+                  console.log('get_cmp_info call responseData parse error', e);
+                }
+                break;
+              default:
+                console.log('default call responseData');
+                console.log(data);
+                console.log(responseData);
+            }
+          }
+        );
+      } else {
+        setlogger(5);
+        console.log('WebViewJavascriptBridge 对象不存在 初始化失败');
+      }
+    } catch (e) {
+      setlogger(6);
+      console.log('网页发送消息出错', e);
+    }
+  }
+
+  function doAction (action, data) {
+    console.log(action);
+    switch (action) {
+      case 'cmp_click_manage':
+        sendAction({
+          action: action
+        });
+        break;
+      case 'cmp_click_consent':
+        sendAction({
+          action: action
+        });
+        break;
+      case 'cmp_click_confirm_choices':
+        getSelect();
+        sendAction({
+          action: action,
+          data: CMP_JSON_DATA
+        });
+        break;
+      case 'cmp_click_accept_all':
+        document.querySelectorAll('.switch-container').forEach(function (v) {
+          v.className = 'switch-container switch-on';
+        });
+        getSelect();
+        sendAction({
+          action: action,
+          data: CMP_JSON_DATA
+        });
+        break;
+      case 'open_web':
+        sendAction({
+          action: action,
+          data: {url: data.url}
+        });
+        break;
+      default:
+        console.log('default call responseData');
+    }
+  }
+
+  document.querySelectorAll('.action-button').forEach(function (v) {
+    v.addEventListener('click', function (e) {
+      if (e.target && e.target.dataset.action) {
+        setlogger(e.target.dataset.action);
+        doAction(e.target.dataset.action, e.target.dataset);
+      }
+    });
+  });
+  //
+  // document.body.addEventListener('click', function (e) {
+  //   console.log(e);
+  //   console.log(e.target);
+  //   console.log(e.target.dataset);
+  //   console.log(e.target.dataset.action);
+  //   if (e.target && e.target.dataset.action) {
+  //     doAction(e.target.dataset.action)
+  //   }
+  // })
+  function getSelect () {
+    var keyMap = [];
+    document.querySelectorAll('.switch-container.switch-on').forEach(function (v) {
+      keyMap.push(v.dataset);
+    });
+    console.log(keyMap);
+    var PurposesConsent = [];
+    var PurposesLITransparency = [];
+    var VendorConsents = [];
+    var LegitimateInterestConsents = [];
+    var SaveExtraData_string = [];
+    keyMap.forEach(function (v) {
+      if (v.key === "purposes") {
+        if (v.type === "1") {
+          PurposesConsent.push(Number(v.id));
+        }
+        if (v.type === "2") {
+          PurposesLITransparency.push(Number(v.id));
+        }
+      }
+      if (v.key === "TCFvendors") {
+        if (v.type === "1") {
+          VendorConsents.push(Number(v.id));
+        }
+        if (v.type === "2") {
+          LegitimateInterestConsents.push(Number(v.id));
+        }
+      }
+      if (v.key === "AdPartners") {
+        if (v.type === "2") {
+          SaveExtraData_string.push(String(v.id));
+        }
+      }
+    });
+    CMP_JSON_DATA.Core.PurposesConsent = PurposesConsent;
+    CMP_JSON_DATA.Core.PurposesLITransparency = PurposesLITransparency;
+    CMP_JSON_DATA.Core.VendorConsents = VendorConsents;
+    CMP_JSON_DATA.Core.LegitimateInterestConsents = LegitimateInterestConsents;
+    CMP_JSON_DATA.AdPartners = SaveExtraData_string.join(',');
+  }
+
+  function checkin (item, list) {
+    var has = false;
+    list.forEach(function (v) {
+      if (v.id === item.id && v.type === item.type && v.key === item.key) {
+        has = true;
+      }
+    });
+    return has;
+  }
+
+  function setDataSelect () {
+    var keyMap = [];
+    CMP_JSON_DATA.Core.PurposesConsent.forEach(function (v) {
+      keyMap.push({id: String(v), type: "1", key: "purposes"});
+    });
+    CMP_JSON_DATA.Core.PurposesLITransparency.forEach(function (v) {
+      keyMap.push({id: String(v), type: "2", key: "purposes"});
+    });
+    CMP_JSON_DATA.Core.VendorConsents.forEach(function (v) {
+      keyMap.push({id: String(v), type: "1", key: "TCFvendors"});
+    });
+    CMP_JSON_DATA.Core.LegitimateInterestConsents.forEach(function (v) {
+      keyMap.push({id: String(v), type: "2", key: "TCFvendors"});
+    });
+    if (CMP_JSON_DATA.AdPartners) {
+      var AdPartners = CMP_JSON_DATA.AdPartners.split(',');
+      AdPartners.forEach(function (v) {
+        keyMap.push({id: v, type: "2", key: "AdPartners"});
+      });
+    }
+    console.log(keyMap);
+    document.querySelectorAll('.switch-container').forEach(function (v) {
+      var dataset = v.dataset;
+      console.log(dataset);
+      if (checkin(dataset, keyMap)) {
+        console.log(v);
+        v.className = 'switch-container switch-on';
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>appsflyerAppId</key>
+    <string>com.matteljv.uno</string>
+    <key>appsflyerDevKey</key>
+    <string>qCWrc7L2pa8SbLEvonfmja</string>
+    <key>FBUserfriendsSwitch</key>
+    <true />
+    <key>firebaseSwitch</key>
+    <true />
+    <key>GameBiURL</key>
+    <string>mn01.client</string>
+    <key>gameId</key>
+    <string>1000000</string>
+    <key>gameKey</key>
+    <string>0940e7064a72b82b</string>
+    <key>kefuAppID</key>
+    <string>mattel163_platform_d7cae6309e0cf823cc6d7fd21a628b48</string>
+    <key>kefuDomainName</key>
+    <string>mattel163.aihelp.net</string>
+    <key>kefuKey</key>
+    <string>MATTEL163_app_f857d447aa344012b2028d12a3ffd80b</string>
+    <key>machineSwitch</key>
+    <true />
+    <key>mt_app_id</key>
+    <string>1</string>
+    <key>mt_secrect</key>
+    <string>bfhijpzBIM@%(-+,</string>
+    <key>OMNIPermission</key>
+    <dict>
+      <key>ATTracking</key>
+      <true />
+      <key>PushNotification</key>
+      <true />
+    </dict>
+    <key>sdkAlpha</key>
+    <string>0.85</string>
+    <key>showAllowSellTips</key>
+    <false />
+    <key>showIapLoading</key>
+    <false />
+    <key>showLinkedChannelInfoWithGuest</key>
+    <true />
+    <key>silentMode</key>
+    <false />
+    <key>taiwanConfig</key>
+    <dict>
+      <key>personData</key>
+      <string>https://privacy-tw.letsplayuno.com</string>
+      <key>pravicyProtocal</key>
+      <string>https://www.ariel.com.tw/ariel-privacy-policy</string>
+      <key>taiwansdk</key>
+      <false />
+    </dict>
+  </dict>
+</plist>

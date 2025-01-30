@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DefaultLight</key>
+	<true/>
+	<key>DefaultDark</key>
+	<false/>
+	<key>DefineStyle</key>
+	<dict>
+		<key>BackgroundColor</key>
+		<string>FFFFFF</string>
+		<key>TitleTextColor</key>
+		<string></string>
+		<key>SubtextColor</key>
+		<string></string>
+		<key>BorderColor</key>
+		<string></string>
+		<key>ErrorRed</key>
+		<string></string>
+		<key>SearchColor</key>
+		<string></string>
+		<key>NavIconColor</key>
+		<string></string>
+		<key>SearchPillTextColor</key>
+		<string></string>
+		<key>SearchPillColors</key>
+		<string></string>
+		<key>SearchPillShadowColor</key>
+		<string></string>
+		<key>ShouldRandomizeSearchPillColors</key>
+		<true/>
+	</dict>
+</dict>
+</plist>

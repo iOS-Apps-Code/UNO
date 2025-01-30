@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>DE-CMP</title>
+    <style>* {
+    margin: 0;
+    padding: 0;
+}
+
+.switch-container {
+    width: 0.45rem;
+    height: 0.28rem;
+    flex-shrink: 0;
+    border-radius: 0.45rem;
+    background: #34C759;
+    padding: 0.02rem;
+    box-sizing: border-box;
+    font-size: 0;
+}
+
+.switch-item {
+    width: 0.24rem;
+    height: 0.24rem;
+    background-color: #FFFFFF;
+    border-radius: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.switch-off-space {
+    width: 0.16rem;
+    height: 0.24rem;
+    background-color: transparent;
+    display: inline-block;
+    vertical-align: top;
+    transition: width 0.3s linear;
+}
+
+.switch-off {
+    background-color: #E9E9EB;
+}
+
+.switch-off .switch-off-space {
+    width: 0;
+}
+
+.height-space-4 {
+    height: 0.04rem;
+}
+
+.height-space-8 {
+    height: 0.08rem;
+}
+
+.width-space-16 {
+    width: 0.16rem;
+}
+
+.width-space-13 {
+    width: 0.13rem;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.height-space-12 {
+    height: 0.12rem;
+}
+
+body {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.show_vendor {
+    display: none;
+}
+.show {
+    display: block!important;
+}
+</style>
+    <script>
+      function setlogger(value){
+        // document.querySelector('#logger').innerHTML += value + '\n'
+      }
+      // window.onerror = function (e) {
+      //   setlogger(JSON.stringify(e))
+      // }
+      if (window.NodeList && !NodeList.prototype.forEach) {
+        NodeList.prototype.forEach = function (callback, thisArg) {
+          thisArg = thisArg || window;
+          for (var i = 0; i < this.length; i++) {
+            callback.call(thisArg, this[i], i, this);
+          }
+        };
+      }
+      var _orientation = null;
+      var platform = '';
+      function getQueryVariable (variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split('&');
+        for (var i = 0 ; i < vars.length ; i++) {
+          var pair = vars[i].split('=');
+          if (pair[0] === variable) {
+            return pair[1];
+          }
+        }
+        return false;
+      }
+
+      function getPlatform () {
+        try {
+          // 一层判断（客户端告知）
+          if (getQueryVariable('platform')) {
+            var platformFormUrl = getQueryVariable('platform').toLowerCase();
+            if ('ios' === platformFormUrl || 'android' === platformFormUrl) {
+              platform = platformFormUrl;
+              console.log(platform + '环境（form url）');
+              return;
+            }
+          }
+
+          // 二层判断（userAgent）
+          console.log('navigator.userAgent', navigator.userAgent);
+          if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+            platform = 'ios';
+          } else if (/(Android)/i.test(navigator.userAgent)) {
+            platform = 'android';
+          } else {
+            platform = 'pc';
+          }
+
+          document.documentElement.className += ' ' + platform;
+          console.log(platform + '环境（form userAgent）');
+        } catch (e) {
+          console.log('环境判断出错', e);
+        }
+      }
+
+      getPlatform();
+
+      function getOrientation () {
+        if (platform === 'ios') {
+          if (/(orientation=portrait)/i.test(navigator.userAgent)) {
+            _orientation = 'portrait';
+          } else {
+            _orientation = 'landscape';
+          }
+        } else {
+          _orientation = getQueryVariable('orientation') || 'portrait';
+        }
+
+        console.log(_orientation);
+        document.documentElement.className += ' ' + _orientation;
+      }
+
+      getOrientation();
+    </script>
+    <script>
+  var _portrait_width = 295
+  var _landscape_width = 416
+
+  !function (n) {
+    var e = n.document,
+      t = e.documentElement,
+
+      o = "orientationchange" in n ? "orientationchange" : "resize",
+      a = function () {
+        var _width = _portrait_width;
+        if (_orientation === 'landscape') {
+          _width = _landscape_width;
+        }
+        var i = _width, //720是设计稿尺寸
+          d = i / 100;
+        var n = t.clientWidth;
+        n > 720 && (n = 720);
+        t.style.fontSize = n / d + "px";
+      };
+    e.addEventListener && (n.addEventListener(o, a, !1), e.addEventListener("DOMContentLoaded", a, !1));
+  }(window);
+</script>
+
+</head>
+<body>
+<pre id="logger" style="font-size: 0.14rem;max-height: 200px;overflow: auto"></pre>
+
+    <style>.header_title {
+  color: #000;
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: 0.14rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 0.21rem;
+  letter-spacing: -0.005rem;
+  text-align: center;
+}
+.container {
+  border-radius: 0.07rem;
+  border: 0.005rem solid #D9D9D9;
+  background: #F8F6F6;
+  width: 100%;
+  height: 3.38rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.content {
+  width: 100%;
+  height: 3.01rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.button-list {
+  width: 100%;
+  position: relative;
+  background-color: #F8F6F6;
+  font-size: 0;
+  height: 0.36rem;
+}
+.button-list:before {
+  content: '';
+  position: absolute;
+  top: -0.32rem;
+  height: 0.32rem;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15) 0%, rgba(232, 232, 232, 0.15) 100%);
+  pointer-events: none;
+}
+.manage-button,
+.consent-button {
+  width: 50%;
+  display: inline-block;
+  color: #000;
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: 0.14rem;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.005rem;
+  text-align: center;
+  line-height: 0.36rem;
+}
+.height-split-line {
+  position: absolute;
+  left: 50%;
+  top: 0.1rem;
+  height: 0.18rem;
+  width: 0.5px;
+  background-color: #AFAFAF;
+}
+.content-header-title {
+  color: #333;
+  text-align: center;
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: 0.14rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 0.21rem;
+  /* 150% */
+  letter-spacing: -0.005rem;
+  padding: 0 0.12rem;
+}
+.content-item {
+  color: #333;
+  text-align: left;
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: 0.14rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.21rem;
+  /* 150% */
+  letter-spacing: -0.005rem;
+  padding: 0 0.12rem;
+}
+.width-split-line-container {
+  width: 100%;
+  height: 1px;
+  /*background: #D9D9D9;*/
+  box-sizing: border-box;
+  padding: 0 0.12rem;
+}
+.width-split-line {
+  width: 100%;
+  height: 1px;
+  background: #D9D9D9;
+}
+.learn-more-container {
+  width: 100%;
+  height: auto;
+  /*background: #D9D9D9;*/
+  box-sizing: border-box;
+  padding: 0 0.12rem;
+}
+.learn-more-header {
+  height: 0.18rem;
+  display: flex;
+}
+.learn-more-header-text {
+  color: #333;
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: 0.14rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 0.18rem;
+  /* 150% */
+  letter-spacing: -0.005rem;
+  vertical-align: top;
+}
+.notice-content {
+  color: #333;
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: 0.12rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.18rem;
+  /* 150% */
+  letter-spacing: -0.005rem;
+  vertical-align: top;
+  padding: 0 0.12rem;
+}
+.notice-content-bold {
+  font-weight: 600;
+}
+.learn-more-header-img {
+  display: inline-block;
+  vertical-align: top;
+  height: 0.18rem;
+  width: 0.18rem;
+  padding: 0.03rem 0.03rem;
+  border-radius: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  background-color: #ffffff;
+  box-sizing: border-box;
+  line-height: 0.18rem;
+}
+.lineheight18 {
+  line-height: 0.18rem;
+}
+.learn-more-header-img > img {
+  height: 0.1rem;
+  width: 0.1rem;
+  vertical-align: top;
+}
+.width-space-8 {
+  width: 0.08rem;
+  display: inline-block;
+  vertical-align: top;
+}
+.learn-more-contents {
+  border-radius: 0.08rem;
+  background: #FFF;
+  box-shadow: 0px 0px 0.1rem 0px rgba(0, 0, 0, 0.09);
+  width: 100%;
+  overflow: hidden;
+  height: 0;
+}
+.learn-more-content-question {
+  color: #333;
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: 0.14rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 0.2rem;
+  /* 150% */
+  letter-spacing: -0.004rem;
+  padding: 0 0.12rem 0 0.28rem;
+  position: relative;
+}
+.learn-more-content-answer {
+  color: #666;
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: 0.12rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.18rem;
+  /* 150% */
+  letter-spacing: -0.004rem;
+  padding: 0 0.17rem;
+  white-space: pre-wrap;
+  height: 0;
+  overflow: hidden;
+}
+.learn-more-content-img {
+  display: inline-block;
+  vertical-align: top;
+  height: 0.2rem;
+  width: 0.2rem;
+  padding: 0.05rem;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0rem;
+  left: 0.12rem;
+}
+.learn-more-content-img > img {
+  height: 0.1rem;
+  width: 0.1rem;
+  vertical-align: top;
+}
+.first-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.header_title {
+  height: auto;
+}
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1;
+}
+.consent-button-img {
+  width: 0.18rem;
+  height: 0.36rem;
+  padding: 0.08rem 0.01rem;
+  box-sizing: border-box;
+  vertical-align: top;
+  display: none;
+}
+.consent-active .consent-button-img {
+  display: inline-block;
+}
+.consent-button-img > img {
+  width: 0.16rem;
+  height: 0.16rem;
+  vertical-align: top;
+}
+.consent-active.consent-button {
+  color: #007AFF;
+  font-weight: 500;
+}
+.learn-more-header .learn-more-header-img {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  transition: -webkit-transform linear 0.2s;
+  transition: transform linear 0.2s;
+  transition: transform linear 0.2s, -webkit-transform linear 0.2s;
+}
+.learn-more-header.learn-more-active .learn-more-header-img {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.learn-more-content-question .learn-more-content-img {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  transition: all linear 0.2s;
+}
+.learn-more-content-question.learn-more-content-question-active .learn-more-content-img {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.learn-more-content-question-text {
+  margin-left: 0.08rem;
+}
+.open_web_text {
+  text-decoration: underline;
+}
+.consent-button-text,
+.consent-button-img,
+consent-button-img > img {
+  pointer-events: none;
+}
+</style>
+<div class="first-page">
+    <div class="header_title">Bitte lesen Sie unsere <span class='open_web_text action-button' data-action='open_web' data-url='https://www.mattel163.com/eula.html'>Endbenutzer-Lizenzvereinbarung (EULA)</span> und unsere <span class='open_web_text action-button' data-action='open_web' data-url='https://www.mattel163.com/privacypolicy.html'>Datenschutzrichtlinie</span>. Stimmen Sie allen Bedingungen und Richtlinien zu, bevor Sie fortfahren.</div>
+    <div class="height-space-8"></div>
+    <div class="container">
+        <div class="content">
+            <div style="height: auto">
+                <div class="height-space-8"></div>
+                <div class="content-header-title">Zustimmung zur Verwendung personenbezogener Daten</div>
+                <div class="height-space-4"></div>
+                <div class="content-item">1. Personalisierte Anzeigen und Inhalte, Messung von Anzeigen und Inhalten, Einblicke in die Zielgruppe und Produktentwicklung.
+                </div>
+                <div class="height-space-4"></div>
+                <div class="content-item">2.  Speichern und/oder Zugriff auf Informationen auf einem Gerät.</div>
+                <div class="height-space-8"></div>
+                <div class="width-split-line-container">
+                    <div class="width-split-line"></div>
+                </div>
+                <div class="height-space-8"></div>
+                <div class="learn-more-container">
+                    <div class="learn-more-header learn-more-button"><span class="learn-more-header-img"><img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAA7UlEQVQ4ja3Uuw3CQAwG4N8XMQibUJwoqNgAKKnQgUSgClQo4iU2gA0oASWCFdiAETJAIlNFBAS5M+DO9ulzcZaBPweVNReLVY8ZzTSl6XhsLj+Bs9m65nl8znNmr+37vZ0NVC5TAYAo24bhpmV7531qxPHxpnWdiKj2QLmpdeMWRYerGASAKDpdpGgp+A1qBaWoEyhBS/fwXYThckJEQaGUVCpUNcYkgGBt8lBKcTEnAnJMDM7n64CZJ8UaM5unAb9gAHeGw8FWDLpiTqAEs4JSrBR8vTYuGCD6ZTsGOF0bJFmmuqNRf+8+/I9xBwKRkRCMQp6XAAAAAElFTkSuQmCC" alt="0"></span><span
+                                class="width-space-8"></span><span class="learn-more-header-text">Mehr erfahren</span>
+                    </div>
+                    <div class="height-space-8 lineheight18"></div>
+                    <div class="learn-more-contents">
+                        
+                            <div class="height-space-8"></div>
+<div class="learn-more-content-question learn-more-content-question-1" data-index="1">
+    <span class="learn-more-content-img"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAA7UlEQVQ4ja3Uuw3CQAwG4N8XMQibUJwoqNgAKKnQgUSgClQo4iU2gA0oASWCFdiAETJAIlNFBAS5M+DO9ulzcZaBPweVNReLVY8ZzTSl6XhsLj+Bs9m65nl8znNmr+37vZ0NVC5TAYAo24bhpmV7531qxPHxpnWdiKj2QLmpdeMWRYerGASAKDpdpGgp+A1qBaWoEyhBS/fwXYThckJEQaGUVCpUNcYkgGBt8lBKcTEnAnJMDM7n64CZJ8UaM5unAb9gAHeGw8FWDLpiTqAEs4JSrBR8vTYuGCD6ZTsGOF0bJFmmuqNRf+8+/I9xBwKRkRCMQp6XAAAAAElFTkSuQmCC" alt="0">
+    </span><span  class="learn-more-content-question-text learn-more-content-question-text-1">Wie kann ich meine Wahl ändern? </span></div>
+<div class="height-space-4"></div>
+<div class="learn-more-content-answer learn-more-content-answer-1">Ändern Sie Ihre Wahl jederzeit in unseren Spieleeinstellungen.</div>
+
+                        
+                            <div class="height-space-8"></div>
+<div class="learn-more-content-question learn-more-content-question-2" data-index="2">
+    <span class="learn-more-content-img"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAA7UlEQVQ4ja3Uuw3CQAwG4N8XMQibUJwoqNgAKKnQgUSgClQo4iU2gA0oASWCFdiAETJAIlNFBAS5M+DO9ulzcZaBPweVNReLVY8ZzTSl6XhsLj+Bs9m65nl8znNmr+37vZ0NVC5TAYAo24bhpmV7531qxPHxpnWdiKj2QLmpdeMWRYerGASAKDpdpGgp+A1qBaWoEyhBS/fwXYThckJEQaGUVCpUNcYkgGBt8lBKcTEnAnJMDM7n64CZJ8UaM5unAb9gAHeGw8FWDLpiTqAEs4JSrBR8vTYuGCD6ZTsGOF0bJFmmuqNRf+8+/I9xBwKRkRCMQp6XAAAAAElFTkSuQmCC" alt="0">
+    </span><span  class="learn-more-content-question-text learn-more-content-question-text-2">Welche Drittanbieter können auf meine Daten zugreifen? </span></div>
+<div class="height-space-4"></div>
+<div class="learn-more-content-answer learn-more-content-answer-2">Folgende Drittanbieter können auf Ihre Daten zugreifen, um Dienstleistungen bereitzustellen:
+   - TCF-Anbieter
+   - Google LLC
+   - Vungle, Inc
+   - Fyber Monetization Ltd.
+
+   - Werbepartner
+   - Meta
+   - Unity Technologies
+   - AppLovin Corporation
+   - Mintegral International Limited
+   - ironSource Ltd</div>
+
+                        
+                        <div class="height-space-8"></div>
+                    </div>
+                </div>
+                <div class="height-space-8"></div>
+                <div class="notice-content">Ihre persönlichen Daten werden verarbeitet. Informationen von Ihrem Gerät (eindeutige Kennungen und andere Gerätedaten) können <span class="notice-content-bold">von 142 TCF-Anbietern und 84 Werbepartnern</span> gespeichert, abgerufen und geteilt werden.
+                </div>
+                <div class="height-space-8"></div>
+            </div>
+        </div>
+        <div class="button-list">
+            <div class="manage-button action-button" data-action="cmp_click_manage">Verwalten</div>
+            <div class="height-split-line"></div>
+            <div class="consent-button action-button" data-action="cmp_click_consent"><span class="consent-button-img"><img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA80lEQVRYhe3TTQqCQBiA4dcCt13Bo+hJ7AbVLirIoKBlR6gjdII8QjfIY4SE08LI/B91dNN8IPg3vg+ooEePnn8fY7DSUtiMcQGfg3EZFrAWLoLz93iEw97w492h4wARdmIZOg4BUXKuv1dQHnc4GkG/AMl4P4AGcfWAhvE8YCNmRMyBOyYLvOJFquJpgCcsQh6pxSaOFKJlHH5/w2fumkXIDU9YfcXTgPjmXSNExzgUfYQr4QHb3EOzr0NBvBggg1AULwdUIeD02TrHqwHliOy0jtcD6hGd4nKAckTnuDwgj1ASbwaIEVNGTHhxVRHXowfgDQ+FnpcpaD6KAAAAAElFTkSuQmCC" alt="0"></span><span class="consent-button-text">Zustimmung</span></div>
+        </div>
+    </div>
+</div>
+<script>
+  document.querySelector('.consent-button').addEventListener('click', function (e) {
+    if (e.currentTarget.className.indexOf('consent-active') === -1) {
+      e.currentTarget.className += ' consent-active'
+    }
+  })
+
+  document.querySelector('.learn-more-button').addEventListener('click', function (e) {
+    if (e.currentTarget.className.indexOf('learn-more-active') === -1) {
+      e.currentTarget.className += ' learn-more-active'
+      document.querySelector('.learn-more-contents').style.height = 'auto'
+
+    } else {
+      e.currentTarget.className = 'learn-more-header learn-more-button'
+      document.querySelector('.learn-more-contents').style.height = '0'
+    }
+  })
+  document.querySelectorAll('.learn-more-content-question').forEach(function(v){
+    v.addEventListener('click', function (e) {
+      var index = e.currentTarget.dataset.index
+      if (e.currentTarget.className.indexOf('learn-more-content-question-active') === -1) {
+        e.currentTarget.className += ' learn-more-content-question-active'
+        e.currentTarget.parentNode.querySelector('.learn-more-content-answer-' + index).style.height = 'auto'
+      } else {
+        e.currentTarget.className = 'learn-more-content-question learn-more-content-question-' + index
+        e.currentTarget.parentNode.querySelector('.learn-more-content-answer-' + index).style.height = '0'
+      }
+    })
+  })
+
+  document.querySelector('.notice-content-bold').addEventListener('click', function (e) {
+    document.querySelector('.learn-more-button').className = 'learn-more-header learn-more-button learn-more-active'
+    document.querySelector('.learn-more-contents').style.height = 'auto'
+    document.querySelector('.learn-more-content-question-2').className = 'learn-more-content-question learn-more-content-question-2 learn-more-content-question-active'
+    document.querySelector('.learn-more-content-answer-2').style.height = 'auto'
+    try {
+      document.querySelector('.learn-more-content-answer-2').scrollIntoViewIfNeeded()
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+
+</script>
+
+
+
+<script>
+  // window.onerror=function (e) {
+  //   alert(JSON.stringify(e))
+  // }
+
+  var ALL_CMP_JSON_DATA = {
+    "Core": {
+      "Version": 2,
+      "CmpId": 300,
+      "CmpVersion": 2,
+      "ConsentScreen": 1,
+      "ConsentLanguage": "DE",
+      "VendorListVersion": 28,
+      "TcfPolicyVersion": 4,
+      "IsServiceSpecific": true,
+      "UseNonStandardTexts": false,
+      "SpecialFeatureOptIns": [],
+      "PurposesConsent": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+      "PurposesLITransparency": [1, 7, 8, 9, 10, 11],
+      "PurposeOneTreatment": true,
+      "PublisherCC": "HK",
+      "VendorConsents": [755, 667, 262, 867],
+      "LegitimateInterestConsents": [755, 667, 262, 867]
+    },
+    "Disclosed": {
+      "DisclosedVendors": []
+    },
+    "PublisherTC": {
+      "PubPurposesConsent": [],
+      "PubPurposesLITransparency": [],
+      "NumCustomPurposes": 0,
+      "CustomPurposesConsent": [],
+      "CustomPurposesLITransparency": []
+    },
+    // 前端往SDK存额外CMP数据（留后门，如果后续SDK上线后，cmp需要新增别的字段，可以直接从前端更新页面，通过这个字段进行新增数据）
+    "SaveExtraData": {
+      "int": {key1: 1},
+      "string": {key2: '1'},
+      "bool": {key3: true}
+    },
+    "AdPartners": "Meta,UnityTechnologies,AppLovin_Corporation,Mintegral_International_Limited,ironSource_Ltd"
+  };
+  var CMP_JSON_DATA_string = JSON.stringify({
+    "Core": {
+      "Version": 2,
+      "CmpId": 300,
+      "CmpVersion": 2,
+      "ConsentScreen": 1,
+      "ConsentLanguage": "DE",
+      "VendorListVersion": 28,
+      "TcfPolicyVersion": 4,
+      "IsServiceSpecific": true,
+      "UseNonStandardTexts": false,
+      "SpecialFeatureOptIns": [],
+      "PurposesConsent": [],
+      "PurposesLITransparency": [1, 7, 8, 9, 10, 11],
+      "PurposeOneTreatment": true,
+      "PublisherCC": "HK",
+      "VendorConsents": [],
+      "LegitimateInterestConsents": [755, 667, 262, 867]
+    },
+    "Disclosed": {
+      "DisclosedVendors": []
+    },
+    "PublisherTC": {
+      "PubPurposesConsent": [],
+      "PubPurposesLITransparency": [],
+      "NumCustomPurposes": 0,
+      "CustomPurposesConsent": [],
+      "CustomPurposesLITransparency": []
+    },
+    // 前端往SDK存额外CMP数据（留后门，如果后续SDK上线后，cmp需要新增别的字段，可以直接从前端更新页面，通过这个字段进行新增数据）
+    "SaveExtraData": {
+      "int": {},
+      "string": {},
+      "bool": {}
+    },
+    "AdPartners": ""
+  });
+  var default_CMP_JSON_DATA = JSON.parse(CMP_JSON_DATA_string);
+  var CMP_JSON_DATA = JSON.parse(CMP_JSON_DATA_string);
+
+  function connectWebViewJavascriptBridge (callback) {
+    if (platform === 'ios') {
+      console.log(window.WebViewJavascriptBridge);
+      console.log(window.WVJBCallbacks);
+      if (window.WebViewJavascriptBridge) {
+        return callback(WebViewJavascriptBridge);
+      }
+      if (window.WVJBCallbacks) {
+        return window.WVJBCallbacks.push(callback);
+      }
+      window.WVJBCallbacks = [callback];
+      var WVJBIframe = document.createElement('iframe');
+      WVJBIframe.style.display = 'none';
+      WVJBIframe.src = 'https://__bridge_loaded__';
+      document.documentElement.appendChild(WVJBIframe);
+      setTimeout(function () {
+        document.documentElement.removeChild(WVJBIframe);
+      }, 0);
+      return;
+    }
+
+    if (platform === 'android') {
+      if (window.WebViewJavascriptBridge && WebViewJavascriptBridge.inited) {
+        callback(WebViewJavascriptBridge);
+      } else {
+        document.addEventListener(
+          'WebViewJavascriptBridgeReady'
+          , function () {
+            callback(WebViewJavascriptBridge);
+          },
+          false
+        );
+      }
+      return;
+    }
+    return;
+  }
+
+  connectWebViewJavascriptBridge(function (bridge) {
+    // Android init()
+    console.log(platform, 'init');
+    if (platform === 'android') {
+      bridge.init(function (message, responseCallback) {
+        console.log('JS got a message', message);
+        var data = {
+          'Javascript Responds': 'test!'
+        };
+
+        if (responseCallback) {
+          console.log('JS responding with', data);
+          responseCallback(data);
+        }
+      });
+    }
+
+    bridge.registerHandler("callFunctionInJs", function (data, responseCallback) {
+      if (typeof data === 'string') {
+        try {
+          data = JSON.parse(data);
+        } catch (e) {
+          console.log(data);
+        }
+      }
+
+      switch (data.action) {
+        case 'get_cmp_info':
+          if (document.querySelector('.consent-active')) {
+            CMP_JSON_DATA = ALL_CMP_JSON_DATA;
+          }
+          sendAction({
+            action: 'log_sdk_event',
+            data: {
+              log_type: 'get_cmp_info',
+              data: {
+                cmp_info: {
+                  CmpVersion: CMP_JSON_DATA.Core.CmpVersion,
+                  ConsentScreen: CMP_JSON_DATA.Core.ConsentScreen,
+                  ConsentLanguage: CMP_JSON_DATA.Core.ConsentLanguage,
+                  PurposesConsent: CMP_JSON_DATA.Core.PurposesConsent,
+                  PurposesLITransparency: CMP_JSON_DATA.Core.PurposesLITransparency,
+                  VendorConsents: CMP_JSON_DATA.Core.VendorConsents,
+                  LegitimateInterestConsents: CMP_JSON_DATA.Core.LegitimateInterestConsents,
+                  SaveExtraData: CMP_JSON_DATA.SaveExtraData,
+                }
+              }
+            }
+          });
+          responseCallback({
+            success: true,
+            action: data.action,
+            data: CMP_JSON_DATA
+          });
+          break;
+        case 'js_bridge_init_complete':
+          responseCallback({
+            success: true,
+            action: data.action,
+            data: ''
+          });
+          sendAction({
+            action: 'log_sdk_event',
+            data: {
+              log_type: 'load_cmppage_suc',
+              data: {
+                cmp_info: {
+                  page_name: 'Home', page_version: '1.1.25'
+                }
+              }
+            }
+          });
+          sendAction({
+            action: 'get_cmp_info'
+          });
+          break;
+        default:
+          responseCallback({
+            success: false,
+            action: data.action,
+            data: ''
+          });
+          break;
+      }
+    });
+  });
+
+  function sendAction (data) {
+    console.log('sendAction');
+    console.log(data);
+    setlogger(1);
+    try {
+      setlogger(2);
+      if (window.WebViewJavascriptBridge) {
+        setlogger(3);
+        window.WebViewJavascriptBridge.callHandler('callNativeFromWeb', data, function (responseData) {
+            setlogger(4);
+            switch (data.action) {
+              case 'get_cmp_info':
+                console.log('get_cmp_info call responseData', responseData);
+                // if (!responseData) return console.log('get_cmp_info call responseData return', responseData);
+                try {
+                  if (responseData && typeof responseData === 'string') {
+                    responseData = JSON.parse(responseData);
+                  }
+                  var _CMP_JSON_DATA = responseData && responseData.data && responseData.data.Core;
+                  if (_CMP_JSON_DATA) {
+                    if (responseData.data.Core.CmpId === CMP_JSON_DATA.Core.CmpId) {
+                      console.log('CmpId 一致');
+                      var ConsentLanguage = CMP_JSON_DATA.Core.ConsentLanguage
+                      CMP_JSON_DATA = responseData.data;
+                      CMP_JSON_DATA.Core.ConsentLanguage = ConsentLanguage
+                    } else {
+                      console.log('CmpId 不一致');
+                    }
+                  } else {
+                      
+                    CMP_JSON_DATA = ALL_CMP_JSON_DATA
+                      
+                  }
+                  console.log(CMP_JSON_DATA);
+                  setDataSelect();
+                } catch (e) {
+                  console.log('get_cmp_info call responseData parse error', e);
+                }
+                break;
+              default:
+                console.log('default call responseData');
+                console.log(data);
+                console.log(responseData);
+            }
+          }
+        );
+      } else {
+        setlogger(5);
+        console.log('WebViewJavascriptBridge 对象不存在 初始化失败');
+      }
+    } catch (e) {
+      setlogger(6);
+      console.log('网页发送消息出错', e);
+    }
+  }
+
+  function doAction (action, data) {
+    console.log(action);
+    switch (action) {
+      case 'cmp_click_manage':
+        sendAction({
+          action: action
+        });
+        break;
+      case 'cmp_click_consent':
+        sendAction({
+          action: action
+        });
+        break;
+      case 'cmp_click_confirm_choices':
+        getSelect();
+        sendAction({
+          action: action,
+          data: CMP_JSON_DATA
+        });
+        break;
+      case 'cmp_click_accept_all':
+        document.querySelectorAll('.switch-container').forEach(function (v) {
+          v.className = 'switch-container switch-on';
+        });
+        getSelect();
+        sendAction({
+          action: action,
+          data: CMP_JSON_DATA
+        });
+        break;
+      case 'open_web':
+        sendAction({
+          action: action,
+          data: {url: data.url}
+        });
+        break;
+      default:
+        console.log('default call responseData');
+    }
+  }
+
+  document.querySelectorAll('.action-button').forEach(function (v) {
+    v.addEventListener('click', function (e) {
+      if (e.target && e.target.dataset.action) {
+        setlogger(e.target.dataset.action);
+        doAction(e.target.dataset.action, e.target.dataset);
+      }
+    });
+  });
+  //
+  // document.body.addEventListener('click', function (e) {
+  //   console.log(e);
+  //   console.log(e.target);
+  //   console.log(e.target.dataset);
+  //   console.log(e.target.dataset.action);
+  //   if (e.target && e.target.dataset.action) {
+  //     doAction(e.target.dataset.action)
+  //   }
+  // })
+  function getSelect () {
+    var keyMap = [];
+    document.querySelectorAll('.switch-container.switch-on').forEach(function (v) {
+      keyMap.push(v.dataset);
+    });
+    console.log(keyMap);
+    var PurposesConsent = [];
+    var PurposesLITransparency = [];
+    var VendorConsents = [];
+    var LegitimateInterestConsents = [];
+    var SaveExtraData_string = [];
+    keyMap.forEach(function (v) {
+      if (v.key === "purposes") {
+        if (v.type === "1") {
+          PurposesConsent.push(Number(v.id));
+        }
+        if (v.type === "2") {
+          PurposesLITransparency.push(Number(v.id));
+        }
+      }
+      if (v.key === "TCFvendors") {
+        if (v.type === "1") {
+          VendorConsents.push(Number(v.id));
+        }
+        if (v.type === "2") {
+          LegitimateInterestConsents.push(Number(v.id));
+        }
+      }
+      if (v.key === "AdPartners") {
+        if (v.type === "2") {
+          SaveExtraData_string.push(String(v.id));
+        }
+      }
+    });
+    CMP_JSON_DATA.Core.PurposesConsent = PurposesConsent;
+    CMP_JSON_DATA.Core.PurposesLITransparency = PurposesLITransparency;
+    CMP_JSON_DATA.Core.VendorConsents = VendorConsents;
+    CMP_JSON_DATA.Core.LegitimateInterestConsents = LegitimateInterestConsents;
+    CMP_JSON_DATA.AdPartners = SaveExtraData_string.join(',');
+  }
+
+  function checkin (item, list) {
+    var has = false;
+    list.forEach(function (v) {
+      if (v.id === item.id && v.type === item.type && v.key === item.key) {
+        has = true;
+      }
+    });
+    return has;
+  }
+
+  function setDataSelect () {
+    var keyMap = [];
+    CMP_JSON_DATA.Core.PurposesConsent.forEach(function (v) {
+      keyMap.push({id: String(v), type: "1", key: "purposes"});
+    });
+    CMP_JSON_DATA.Core.PurposesLITransparency.forEach(function (v) {
+      keyMap.push({id: String(v), type: "2", key: "purposes"});
+    });
+    CMP_JSON_DATA.Core.VendorConsents.forEach(function (v) {
+      keyMap.push({id: String(v), type: "1", key: "TCFvendors"});
+    });
+    CMP_JSON_DATA.Core.LegitimateInterestConsents.forEach(function (v) {
+      keyMap.push({id: String(v), type: "2", key: "TCFvendors"});
+    });
+    if (CMP_JSON_DATA.AdPartners) {
+      var AdPartners = CMP_JSON_DATA.AdPartners.split(',');
+      AdPartners.forEach(function (v) {
+        keyMap.push({id: v, type: "2", key: "AdPartners"});
+      });
+    }
+    console.log(keyMap);
+    document.querySelectorAll('.switch-container').forEach(function (v) {
+      var dataset = v.dataset;
+      console.log(dataset);
+      if (checkin(dataset, keyMap)) {
+        console.log(v);
+        v.className = 'switch-container switch-on';
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
+
