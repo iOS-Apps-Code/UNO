@@ -1,0 +1,65 @@
+* {
+    -webkit-user-select: none;
+}
+
+.instructions {
+    -webkit-user-select: text;
+}
+
+
+#middle_top {
+	height:192px;
+}
+
+#middle_center {
+	padding-top:5px;
+	height:26px;
+	font-family:Helvetica;
+	font-size:20px;
+	font-weight:bold;
+	text-align:center;
+	color:white;
+}
+
+#middle_bottom {
+	height:156px;
+}
+
+#imageMask {
+	position:absolute;
+	top:56;
+}
+
+.portrait {
+	width: 320px; 
+	height: 160px; 
+}
+
+.landscape { 
+}
+
+#buyButton {
+	position:absolute;
+	top:44;
+	left:211;
+	width:103;
+	height:51;
+	background:transparent url(buyButton.png);
+}
+
+#buyText {
+	position:relative;
+	top:23;
+	left:46;
+    font-family:Helvetica;
+	font-weight:bold;
+	font-size:15px;
+	color:#870000;
+	width: 50px;
+}
+
+#videoButton {
+	position:absolute;
+	top:186;
+	left:211;
+}

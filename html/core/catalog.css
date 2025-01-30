@@ -1,0 +1,140 @@
+#middle_top {
+	height:35px;
+	text-align:center;	
+}
+
+#middle_center {
+	width:320px;
+}
+
+#mask_paid {
+	position:absolute;
+	top:48;
+	left:58;
+	width:102;
+	height:33;	
+	text-align:center;
+}
+
+#menu_paid_on {
+	position:relative;
+	top:10;
+    font-family:Helvetica;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFFFFF;
+}
+
+#menu_paid_off {
+	position:relative;
+	top:10;
+    font-family:Helvetica;
+	font-size:14px;
+	font-weight:bold;
+	color:#870000;
+}
+
+#mask_free {
+	position:absolute;
+	top:48;
+	left:160;
+	width:102;
+	height:33;	
+	text-align:center;
+}
+
+#menu_free_on {
+	position:relative;
+	top:10;
+    font-family:Helvetica;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFFFFF;
+}
+
+#menu_free_off {
+	position:relative;
+	top:10;
+    font-family:Helvetica;
+	font-size:14px;
+	font-weight:bold;
+	color:#870000;
+}
+
+.gameline {
+	height:69;
+	background-color:blue;
+}
+
+.gameline_logo {
+	position:relative;
+	height:69;
+	width:73;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.gameline_info {
+	position:relative;
+	height:69;
+	width:172;
+	vertical-align: middle;
+    font-family:Helvetica;
+	font-size:14px;
+	font-weight:bold;
+	color:#870000;
+}
+
+.gameline_price {
+	position:relative;
+	width:53;
+	vertical-align: middle;
+    font-family:Helvetica;
+	font-size:14px;
+	font-weight:bold;
+	color:#870000;
+}
+
+.gameline_arrow {
+	position:relative;
+	width:22;
+	vertical-align: middle;
+}
+
+.mask {
+	position:relative;
+	top:-57;
+}
+
+#images {
+	padding-left:5px;
+	width:57;
+	height:57;
+}
+
+
+#gamename {
+	position:relative;
+	top:15;
+	left:0;
+    font-family:Helvetica;
+    font-weight:bold;
+	font-size:14px;
+}
+
+#rating {
+	position:relative;
+	top:18;
+	left:0;
+}
+
+#reviews {
+	position:relative;
+	top:3;
+	left:95;
+	width:100px;
+    font-family:Helvetica;
+	font-size:11px;
+	font-weight:normal;
+	color:#870000;
+}

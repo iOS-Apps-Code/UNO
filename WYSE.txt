@@ -1,0 +1,8 @@
+Dumped on the date of Tue Sep 28 16:48:11 MDT 2010
+
+App Dumped in only 1 seconds!
+
+Internal App Name: UNO --  SHA1 of main binary: df1b6b0c1885ab069d52814b360126c508c8ef7b
+
+Dumped by WYSE... Enjoy! - Contact at wyse29@yahoo.ca
+

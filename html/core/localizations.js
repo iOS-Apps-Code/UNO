@@ -1,0 +1,103 @@
+var tblLanguages=['EN','FR','SP','IT','DE','JP'];
+
+var tblMenuItems=['BS','FY','WN','TOPDEALS','PROMO'];
+
+// initialize localizations
+var tblLocalizations=[];
+for(i in tblLanguages) {
+	tblLocalizations[tblLanguages[i]]=[];
+}
+
+// populate localizations
+tblLocalizations['DE']['BS_menu']="Bestseller";
+tblLocalizations['EN']['BS_menu']="Bestsellers";
+tblLocalizations['FR']['BS_menu']="Meill. ventes";
+tblLocalizations['IT']['BS_menu']="I pi\u00f9 venduti";
+tblLocalizations['JP']['BS_menu']="\u30d9\u30b9\u30c8\u30bb\u30e9\u30fc";
+tblLocalizations['SP']['BS_menu']="+ vendidos";
+tblLocalizations['DE']['PROMO_menu']="Katalog";
+tblLocalizations['EN']['PROMO_menu']="Catalog";
+tblLocalizations['FR']['PROMO_menu']="Catalogue";
+tblLocalizations['IT']['PROMO_menu']="Catalogo";
+tblLocalizations['JP']['PROMO_menu']="\u30ab\u30bf\u30ed\u30b0";
+tblLocalizations['SP']['PROMO_menu']="Cat\u00e1logo";
+tblLocalizations['DE']['FY_menu']="F\u00fcr dich";
+tblLocalizations['EN']['FY_menu']="For You";
+tblLocalizations['FR']['FY_menu']="Pour vous";
+tblLocalizations['IT']['FY_menu']="Per te";
+tblLocalizations['JP']['FY_menu']="\u30aa\u30b9\u30b9\u30e1";
+tblLocalizations['SP']['FY_menu']="Para ti";
+tblLocalizations['DE']['TOPDEALS_menu']="Top Deals";
+tblLocalizations['EN']['TOPDEALS_menu']="Top Deals";
+tblLocalizations['FR']['TOPDEALS_menu']="Bons Plans";
+tblLocalizations['IT']['TOPDEALS_menu']="OffertaeSpeciali";
+tblLocalizations['JP']['TOPDEALS_menu']="\u4eca\u9031\u306e\u304a\u5f97\u60c5\u5831";
+tblLocalizations['SP']['TOPDEALS_menu']="Supergangas";
+tblLocalizations['DE']['WN_menu']="Neuheiten";
+tblLocalizations['EN']['WN_menu']="What's New";
+tblLocalizations['FR']['WN_menu']="Nouveaut\u00e9s";
+tblLocalizations['IT']['WN_menu']="Novit\u00e0";
+tblLocalizations['JP']['WN_menu']="\u65b0\u7740\u60c5\u5831";
+tblLocalizations['SP']['WN_menu']="Novedades";
+
+tblLocalizations['DE']['TOPDEALS_title']="Top Deals";
+tblLocalizations['EN']['TOPDEALS_title']="Top Deals";
+tblLocalizations['FR']['TOPDEALS_title']="Bons Plans";
+tblLocalizations['IT']['TOPDEALS_title']="OffertaeSpeciali";
+tblLocalizations['JP']['TOPDEALS_title']="\u4eca\u9031\u306e\u304a\u5f97\u60c5\u5831";
+tblLocalizations['SP']['TOPDEALS_title']="Supergangas";
+tblLocalizations['DE']['WN_title']="Neuheiten";
+tblLocalizations['EN']['WN_title']="What's New";
+tblLocalizations['FR']['WN_title']="Nouveaut\u00e9s";
+tblLocalizations['IT']['WN_title']="Novit\u00e0";
+tblLocalizations['JP']['WN_title']="\u65b0\u7740\u60c5\u5831";
+tblLocalizations['SP']['WN_title']="Novedades";
+tblLocalizations['DE']['BS_title']="Bestseller";
+tblLocalizations['EN']['BS_title']="Bestsellers";
+tblLocalizations['FR']['BS_title']="Meilleures ventes";
+tblLocalizations['IT']['BS_title']="Pi\u00f9 venduti";
+tblLocalizations['JP']['BS_title']="\u30d9\u30b9\u30c8\u30bb\u30e9\u30fc";
+tblLocalizations['SP']['BS_title']="M\u00e1s vendidos";
+tblLocalizations['DE']['PROMO_title']="Spielekatalog";
+tblLocalizations['EN']['PROMO_title']="Game Catalog";
+tblLocalizations['FR']['PROMO_title']="Catalogue des jeux";
+tblLocalizations['IT']['PROMO_title']="Catalogo giochi";
+tblLocalizations['JP']['PROMO_title']="\u30b2\u30fc\u30e0\u30ab\u30bf\u30ed\u30b0";
+tblLocalizations['SP']['PROMO_title']="Cat\u00e1logo de juegos";
+tblLocalizations['DE']['FY_title']="F\u00fcr dich";
+tblLocalizations['EN']['FY_title']="For You";
+tblLocalizations['FR']['FY_title']="Pour vous";
+tblLocalizations['IT']['FY_title']="Per te";
+tblLocalizations['JP']['FY_title']="\u30aa\u30b9\u30b9\u30e1";
+tblLocalizations['SP']['FY_title']="Para ti";
+
+tblLocalizations['DE']['free']="Gratuites";
+tblLocalizations['EN']['free']="Free";
+tblLocalizations['FR']['free']="Gratis";
+tblLocalizations['IT']['free']="Gratuiti";
+tblLocalizations['JP']['free']="\u7121\u6599";
+tblLocalizations['SP']['free']="Gratis";
+tblLocalizations['DE']['gameinformation']="Informationen zum Spiel";
+tblLocalizations['EN']['gameinformation']="Game Information";
+tblLocalizations['FR']['gameinformation']="Informations sur le jeu";
+tblLocalizations['IT']['gameinformation']="Informazioni sul gioco";
+tblLocalizations['JP']['gameinformation']="\u30b2\u30fc\u30e0\u60c5\u5831";
+tblLocalizations['SP']['gameinformation']="Informaci\u00f3n del juego";
+tblLocalizations['DE']['get_it_now']="Hol es dir!";
+tblLocalizations['EN']['get_it_now']="Get it!";
+tblLocalizations['FR']['get_it_now']="T\u00e9l\u00e9charger  !";
+tblLocalizations['IT']['get_it_now']="Scarica!";
+tblLocalizations['JP']['get_it_now']="\u4eca\u3059\u3050\u30b2\u30c3\u30c8\uff01";
+tblLocalizations['SP']['get_it_now']="\u00a1Cons\u00edguelo!";
+tblLocalizations['DE']['paid']="Kaufen";
+tblLocalizations['EN']['paid']="Paid";
+tblLocalizations['FR']['paid']="Payantes";
+tblLocalizations['IT']['paid']="Apagamento";
+tblLocalizations['JP']['paid']="\u6709\u6599";
+tblLocalizations['SP']['paid']="Pagado";
+tblLocalizations['DE']['reviews']="Bewertungen";
+tblLocalizations['EN']['reviews']="Reviews";
+tblLocalizations['FR']['reviews']="Avis";
+tblLocalizations['IT']['reviews']="Commenti";
+tblLocalizations['JP']['reviews']="\uff9a\uff8b\uff9e\uff6d\uff70";
+tblLocalizations['SP']['reviews']="Cr\u00edticas";

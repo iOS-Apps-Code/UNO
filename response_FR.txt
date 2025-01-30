@@ -1,0 +1,3582 @@
+;;BS_FR.htm;;WN_FR.htm;;topdeals_FR.htm;;catalog_FR.htm;;catalog_free_FR.htm;;gameinformation_FR.htm;;
+##SETT##HAWX##DRVI##RAY2##POPI##BIA2##NOVA##ASCR##SPC5##ACPK##GAN2##RF10##AVAT##IRO2##MASS##BRFI##BLOK##SAND##SHKK##SHFA##REDR##ASP5##DUNQ##LG09##BAHH##SPPK##SKAT##SPAW##EWJI##GRT2##MCOM##TER4##BRBO##ASP4##TO09##FEGT##MBRC##GRTO##RF09##CSIM##RIOE##MYCC##DJMT##MDPL##NYN2##CAST##BLB2##BUBA##CAOF##BRIB##DBMO##MNBO##SSTR##DITW##TVSK##WWGU##CABC##PSOL##
+??E953??M003??M021??M212??E877??E983??E577??E800??E823??M002??M323??M229??E803??E919??M022??E908??E814??E515??E543??E941??E503??E880??E591??E804??E518??E489??E604??E350??E712??E440??E544??E519??E536??E566??E651??E556??M023??E732??E514??E568??E371??
+<SEPARATOR>
+				<html>
+					<head>
+						<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+						<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;">
+						
+						<script type="text/javascript">
+							document.ontouchmove = function(event){
+						        event.preventDefault();
+						   	}
+							var tblMixes = [{"code":"SETT","price":"Get it!","reviews":0,"rating":null,"name":"The Settlers","path":"RES/SETT/FR/"},{"code":"HAWX","price":"Get it!","reviews":0,"rating":null,"name":"Tom Clancy\u2019s H.A.W.X","path":"RES/HAWX/FR/"},{"code":"DRVI","price":"Get it!","reviews":0,"rating":null,"name":"Driver\u2122","path":"RES/DRVI/FR/"},{"code":"RAY2","price":"Get it!","reviews":0,"rating":null,"name":"Rayman 2: The Great Escape","path":"RES/RAY2/FR/"},{"code":"POPI","price":"Get it!","reviews":0,"rating":null,"name":"Prince of Persia : L'Ame du Guerrier","path":"RES/POPI/FR/"},{"code":"BIA2","price":"Get it!","reviews":0,"rating":null,"name":"Brothers In Arms\u00ae 2: Global Front","path":"RES/BIA2/FR/"}];
+						</script>
+						
+						<link rel="stylesheet" href="default.css?version=100"/>
+						<link rel="stylesheet" href="index.css?version=100"/>
+						<link rel="stylesheet" href="xfade2.css?version=100"/>
+						<link rel="stylesheet" href="zflow.css?version=100" />
+						
+						<script type="text/javascript" src="fittext.js?version=100"></script>
+						<script type="text/javascript" src="xfade2.js?version=100"></script>
+						<script type="text/javascript" src="zflow.js?version=100"></script>
+						<script type="text/javascript" src="xmlhttp.js?version=100"></script>
+						
+						<script>
+						function preloadImg(){
+							var imagesNotLoaded = 6;
+									
+								document.getElementById('preload').innerHTML+='<img id="BS0"  src="RES/SETT/FR/splash.jpg" border="0"/>';
+								document.getElementById('BS0').addEventListener("load", function ()
+										{
+										imagesNotLoaded -= 1;
+												if (imagesNotLoaded == 0)
+													init();
+										}
+										);
+								
+										
+								document.getElementById('preload').innerHTML+='<img id="BS1"  src="RES/HAWX/FR/splash.jpg" border="0"/>';
+								document.getElementById('BS1').addEventListener("load", function ()
+										{
+										imagesNotLoaded -= 1;
+												if (imagesNotLoaded == 0)
+													init();
+										}
+										);
+								
+										
+								document.getElementById('preload').innerHTML+='<img id="BS2"  src="RES/DRVI/FR/splash.jpg" border="0"/>';
+								document.getElementById('BS2').addEventListener("load", function ()
+										{
+										imagesNotLoaded -= 1;
+												if (imagesNotLoaded == 0)
+													init();
+										}
+										);
+								
+										
+								document.getElementById('preload').innerHTML+='<img id="BS3"  src="RES/RAY2/FR/splash.jpg" border="0"/>';
+								document.getElementById('BS3').addEventListener("load", function ()
+										{
+										imagesNotLoaded -= 1;
+												if (imagesNotLoaded == 0)
+													init();
+										}
+										);
+								
+										
+								document.getElementById('preload').innerHTML+='<img id="BS4"  src="RES/POPI/FR/splash.jpg" border="0"/>';
+								document.getElementById('BS4').addEventListener("load", function ()
+										{
+										imagesNotLoaded -= 1;
+												if (imagesNotLoaded == 0)
+													init();
+										}
+										);
+								
+										
+								document.getElementById('preload').innerHTML+='<img id="BS5"  src="RES/BIA2/FR/splash.jpg" border="0"/>';
+								document.getElementById('BS5').addEventListener("load", function ()
+										{
+										imagesNotLoaded -= 1;
+												if (imagesNotLoaded == 0)
+													init();
+										}
+										);
+								
+														}
+				
+						function init(){
+							window.onorientationchange(null);
+							showimages(function (images) {
+									zflow(images, "#tray");
+							});
+						}
+						
+						var IsVideoButtonPlayed = false;
+						function followVideo() {
+							updateServerData('http://ingameads.gameloft.com/redir/index.php',strVideoLink,'showPlayscreen');
+						}
+						
+						function showPlayscreen(strLink) {
+							strBaseYoutubeLink=strLink.replace('http://www.youtube.com/watch?v=','');
+							location.href='BS_FR.htm?'+strBaseYoutubeLink;
+						}
+						var backText = "Préc.";
+						</script>
+					</head>
+					<body background="tabBackground.png?version=100" class="zflow" onLoad="preloadImg()">
+						<div style="display:none;" id="preload"></div>
+						
+						<div id="header">
+							<div id="header_image"><img src="top_header.png?version=100" border=0/></div>
+							<div onClick="location.href='http://www.gameloft.com/redir/'">
+								<div id="header_backbutton"><img src="backbutton.png?version=100" border=0/></div>
+							</div>
+							<div id="backText"></div>
+							<div id="header_title">
+								<table class="header_title_container">
+									<tr>
+										<td valign="middle" align="center" id="title"><span>Meilleures ventes</span></td>
+									</tr>
+								</table>
+							</div>
+
+						</div>
+						<div id="middle">
+						<div id="middle_top">
+								<div id="imageContainer">
+
+																	
+									<div style="display: block;" id="image_container_0">
+										<img src="RES/SETT/FR/scr0.jpg" width="254" height="167"><img src="RES/SETT/FR/scr1.jpg" width="254" height="167"><img src="RES/SETT/FR/scr2.jpg" width="254" height="167">									</div>
+																		
+									<div style="display: none;" id="image_container_1">
+										<img src="RES/HAWX/FR/scr0.jpg" width="254" height="167"><img src="RES/HAWX/FR/scr1.jpg" width="254" height="167"><img src="RES/HAWX/FR/scr2.jpg" width="254" height="167">									</div>
+																		
+									<div style="display: none;" id="image_container_2">
+										<img src="RES/DRVI/FR/scr0.jpg" width="254" height="167"><img src="RES/DRVI/FR/scr1.jpg" width="254" height="167"><img src="RES/DRVI/FR/scr2.jpg" width="254" height="167">									</div>
+																		
+									<div style="display: none;" id="image_container_3">
+										<img src="RES/RAY2/FR/scr0.jpg" width="254" height="167"><img src="RES/RAY2/FR/scr1.jpg" width="254" height="167"><img src="RES/RAY2/FR/scr2.jpg" width="254" height="167">									</div>
+																		
+									<div style="display: none;" id="image_container_4">
+										<img src="RES/POPI/FR/scr0.jpg" width="254" height="167"><img src="RES/POPI/FR/scr1.jpg" width="254" height="167"><img src="RES/POPI/FR/scr2.jpg" width="254" height="167">									</div>
+																		
+									<div style="display: none;" id="image_container_5">
+										<img src="RES/BIA2/FR/scr0.jpg" width="254" height="167"><img src="RES/BIA2/FR/scr1.jpg" width="254" height="167"><img src="RES/BIA2/FR/scr2.jpg" width="254" height="167">									</div>
+											
+								</div>
+								<script>
+								fitTextInBox("header_title",28);
+								
+								</script>
+								<a href="#" id="viewLink">
+									<div id="imageMask"><img src="scrBackground.png?version=100" border=0/></div>
+								</a>
+								<a href="#" id="buyLink">
+									<div id="buyButton">
+										<div id="buyText"></div>
+									</div>
+								</a>
+								<a id="videoLink" onClick="followVideo()">
+									<div id="videoButton"><img src="videoButton.png?version=100" border=0/></div>
+								</a>
+							</div>
+							<script>							
+							var strBaseVideoLink='from=UNOG&lg=FR&d=iPhone&t=video&pp=1';
+							var strBaseLink="http://ingameads.gameloft.com/redir/?from=UNOG&lg=FR&d=iPhone";
+							var strBaseViewLink="gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=BS_FR.htm&spec_cat=BS&game=";
+							</script>
+							<script>
+							</script>
+							<div id="separator"></div>
+							<div id="middle_center"><span></span></div>
+							<script>
+							</script>
+							<div id="separator"></div>
+							<div id="middle_bottom">
+								<div style="position:absolute;margin-top:15px;">
+									<div id="container" class="centering">
+										<div id="tray" class="tray"></div>
+									</div>
+								</div>
+								
+								<script type="text/javascript">
+								so_init(true);
+							
+								document.getElementById("backText").innerHTML = backText;
+						
+								document.getElementById("middle_center").innerHTML='<span>' + tblMixes[0].name + '</span>';
+								document.getElementById("buyLink").href=strBaseLink+'&game='+tblMixes[0].code;
+								strVideoLink=strBaseVideoLink+'&game='+tblMixes[0].code;
+								document.getElementById("viewLink").href=strBaseViewLink+tblMixes[0].code+'&position=0';
+								fitTextInBox("middle_center",25);
+								document.getElementById("buyText").innerHTML=tblMixes[0].price;
+								
+								function switchFade(intNumber) {
+									IsVideoButtonPlayed = false;
+									for(var i = 0; i<7; i++) {
+										if(document.getElementById('image_container_'+i)!=undefined) {
+											if(i==intNumber) document.getElementById('image_container_'+i).style.display='block';
+											else document.getElementById('image_container_'+i).style.display='none';
+										}
+									}
+				
+									document.getElementById("middle_center").innerHTML='<span>' + tblMixes[intNumber].name + '</span>';
+									document.getElementById("buyText").innerHTML=tblMixes[intNumber].price;
+									document.getElementById("buyLink").href=strBaseLink+'&game='+tblMixes[intNumber].code;
+									strVideoLink=strBaseVideoLink+'&game='+tblMixes[intNumber].code;
+									document.getElementById("viewLink").href=strBaseViewLink+tblMixes[intNumber].code+'&position='+intNumber;
+									so_init(false);
+									fitTextInBox("middle_center",25);
+								}
+								
+								function showimages(callback){
+								 	var images= [];
+
+									images[0] = "RES/SETT/FR/splash.jpg";images[1] = "RES/HAWX/FR/splash.jpg";images[2] = "RES/DRVI/FR/splash.jpg";images[3] = "RES/RAY2/FR/splash.jpg";images[4] = "RES/POPI/FR/splash.jpg";images[5] = "RES/BIA2/FR/splash.jpg";	
+									callback(images);
+								}
+								
+								window.onorientationchange = function (event) {
+									if (window.orientation == 0) {
+										document.getElementById("container").className="centering portrait";
+									} else {
+										document.getElementById("container").className="centering landscape";		
+									}
+							
+									window.setTimeout( function() { window.scrollTo(0, 0); }, 100 );
+								}
+						</script>
+						</div>
+					</div>
+					
+								<div id="footer">
+					<table cellpadding=0 cellspacing=0 border=0 width='100%' height='100%'>
+						<tr>
+							<td valign="middle" align="center" class="footer_button">
+								<div id="footer_mask">
+									<img src="footer_mask.png?version=100" border=0/>									
+									<table cellpadding=0 cellspacing=0 border=0 width="100%" height="100%" class="menu_on" >
+										<tr>
+											<td valign="middle" align="center" height="32"><img src="BS_on.png?version=100" border=0/></td>
+										</tr>
+										<tr>
+											<td valign="middle" align="center" height="12" style="padding-left:2px;">Meill. ventes</td>
+										</tr>
+									</table>
+								</div>	
+							</td>
+							<td valign="middle" align="center" class="footer_button">
+								<div id="footer_mask">
+																		
+									<table cellpadding=0 cellspacing=0 border=0 width="100%" height="100%" class="menu_off" onClick="location.href='WN_FR.htm'">
+										<tr>
+											<td valign="middle" align="center" height="32"><img src="WN_off.png?version=100" border=0/></td>
+										</tr>
+										<tr>
+											<td valign="middle" align="center" height="12" style="padding-left:2px;">Nouveautés</td>
+										</tr>
+									</table>
+								</div>	
+							</td>
+							<td valign="middle" align="center" class="footer_button">
+								<div id="footer_mask">
+																		<table cellpadding=0 cellspacing=0 border=0 width="100%" height="100%" class="menu_off" onClick="location.href='topdeals_FR.htm'">
+										<tr>
+											<td valign="middle" align="center" height="32"><img src="TOPDEALS_off.png?version=100" border=0/></td>
+										</tr>
+										<tr>
+											<td valign="middle" align="center" height="12" style="padding-left:2px;">Bons Plans</td>
+										</tr>
+									</table>
+								</div>	
+							</td>
+							<td valign="middle" align="center" class="footer_button">
+								<div id="footer_mask">
+																		<table cellpadding=0 cellspacing=0 border=0 width="100%" height="100%" class="menu_off" onClick="location.href='catalog_FR.htm'">
+										<tr>
+											<td valign="middle" align="center" height="32"><img src="PROMO_off.png?version=100" border=0/></td>
+										</tr>
+										<tr>
+											<td valign="middle" align="center" height="12" style="padding-left:2px;">Catalogue</td>
+										</tr>
+									</table>
+								</div>	
+							</td>
+						</tr>	
+					</table>	
+				</div>
+								<div style="display:none; position:absolute; top:700px;" id="videoplayer">
+						<object width="320" height="480">
+							<param name="movie" value="http://www.youtube.com/v/u-D2sMcvYzo&hl=en_US&fs=1&rel=0" id="param_movie"></param>
+								<param name="allowFullScreen" value="true"></param>
+								<param name="allowscriptaccess" value="always"></param>
+								<embed src="" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="320" height="480" id="param_movie_src">
+								</embed>
+						</object>
+					</div>
+					<script>
+						
+					
+					var url = new String (document.location);
+					if(url.lastIndexOf("?")!=-1) {
+						var querystring = url.substring((url.lastIndexOf("?")+1));
+						IsVideoButtonPlayed = true;
+						strLink='http://www.youtube.com/v/'+querystring+'&hl=en_US&fs=1&rel=0';
+						document.getElementById("param_movie").value=strLink;
+						document.getElementById("param_movie_src").src=strLink;
+						document.getElementById("videoplayer").style.display='block';							
+					}
+					</script>
+					</body>
+				</html>
+				<SEPARATOR>
+				<html>
+					<head>
+						<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+						<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;">
+						
+						<script type="text/javascript">
+							document.ontouchmove = function(event){
+						        event.preventDefault();
+						   	}
+							var tblMixes = [{"code":"ACPK","price":"Get it!","reviews":0,"rating":null,"name":"Gameloft Action Pack","path":"RES/ACPK/FR/"},{"code":"POPI","price":"Get it!","reviews":0,"rating":null,"name":"Prince of Persia : L'Ame du Guerrier","path":"RES/POPI/FR/"},{"code":"SPC5","price":"Get it!","reviews":0,"rating":null,"name":"Splinter Cell Conviction\u2122","path":"RES/SPC5/FR/"},{"code":"SHFA","price":"Get it!","reviews":0,"rating":null,"name":"SHREK 4, Il Etait Une Fin\u2122 : le jeu ","path":"RES/SHFA/FR/"},{"code":"MASS","price":"Get it!","reviews":0,"rating":null,"name":"Zombie Infection","path":"RES/MASS/FR/"},{"code":"IRO2","price":"Get it!","reviews":0,"rating":null,"name":"Iron Man 2","path":"RES/IRO2/FR/"}];
+						</script>
+						
+						<link rel="stylesheet" href="default.css?version=100"/>
+						<link rel="stylesheet" href="index.css?version=100"/>
+						<link rel="stylesheet" href="xfade2.css?version=100"/>
+						<link rel="stylesheet" href="zflow.css?version=100" />
+						
+						<script type="text/javascript" src="fittext.js?version=100"></script>
+						<script type="text/javascript" src="xfade2.js?version=100"></script>
+						<script type="text/javascript" src="zflow.js?version=100"></script>
+						<script type="text/javascript" src="xmlhttp.js?version=100"></script>
+						
+						<script>
+						function preloadImg(){
+							var imagesNotLoaded = 6;
+									
+								document.getElementById('preload').innerHTML+='<img id="WN0"  src="RES/ACPK/FR/splash.jpg" border="0"/>';
+								document.getElementById('WN0').addEventListener("load", function ()
+										{
+										imagesNotLoaded -= 1;
+												if (imagesNotLoaded == 0)
+													init();
+										}
+										);
+								
+										
+								document.getElementById('preload').innerHTML+='<img id="WN1"  src="RES/POPI/FR/splash.jpg" border="0"/>';
+								document.getElementById('WN1').addEventListener("load", function ()
+										{
+										imagesNotLoaded -= 1;
+												if (imagesNotLoaded == 0)
+													init();
+										}
+										);
+								
+										
+								document.getElementById('preload').innerHTML+='<img id="WN2"  src="RES/SPC5/FR/splash.jpg" border="0"/>';
+								document.getElementById('WN2').addEventListener("load", function ()
+										{
+										imagesNotLoaded -= 1;
+												if (imagesNotLoaded == 0)
+													init();
+										}
+										);
+								
+										
+								document.getElementById('preload').innerHTML+='<img id="WN3"  src="RES/SHFA/FR/splash.jpg" border="0"/>';
+								document.getElementById('WN3').addEventListener("load", function ()
+										{
+										imagesNotLoaded -= 1;
+												if (imagesNotLoaded == 0)
+													init();
+										}
+										);
+								
+										
+								document.getElementById('preload').innerHTML+='<img id="WN4"  src="RES/MASS/FR/splash.jpg" border="0"/>';
+								document.getElementById('WN4').addEventListener("load", function ()
+										{
+										imagesNotLoaded -= 1;
+												if (imagesNotLoaded == 0)
+													init();
+										}
+										);
+								
+										
+								document.getElementById('preload').innerHTML+='<img id="WN5"  src="RES/IRO2/FR/splash.jpg" border="0"/>';
+								document.getElementById('WN5').addEventListener("load", function ()
+										{
+										imagesNotLoaded -= 1;
+												if (imagesNotLoaded == 0)
+													init();
+										}
+										);
+								
+														}
+				
+						function init(){
+							window.onorientationchange(null);
+							showimages(function (images) {
+									zflow(images, "#tray");
+							});
+						}
+						
+						var IsVideoButtonPlayed = false;
+						function followVideo() {
+							updateServerData('http://ingameads.gameloft.com/redir/index.php',strVideoLink,'showPlayscreen');
+						}
+						
+						function showPlayscreen(strLink) {
+							strBaseYoutubeLink=strLink.replace('http://www.youtube.com/watch?v=','');
+							location.href='WN_FR.htm?'+strBaseYoutubeLink;
+						}
+						var backText = "Préc.";
+						</script>
+					</head>
+					<body background="tabBackground.png?version=100" class="zflow" onLoad="preloadImg()">
+						<div style="display:none;" id="preload"></div>
+						
+						<div id="header">
+							<div id="header_image"><img src="top_header.png?version=100" border=0/></div>
+							<div onClick="location.href='http://www.gameloft.com/redir/'">
+								<div id="header_backbutton"><img src="backbutton.png?version=100" border=0/></div>
+							</div>
+							<div id="backText"></div>
+							<div id="header_title">
+								<table class="header_title_container">
+									<tr>
+										<td valign="middle" align="center" id="title"><span>Nouveautés</span></td>
+									</tr>
+								</table>
+							</div>
+
+						</div>
+						<div id="middle">
+						<div id="middle_top">
+								<div id="imageContainer">
+
+																	
+									<div style="display: block;" id="image_container_0">
+										<img src="RES/ACPK/FR/scr0.jpg" width="254" height="167"><img src="RES/ACPK/FR/scr1.jpg" width="254" height="167"><img src="RES/ACPK/FR/scr2.jpg" width="254" height="167">									</div>
+																		
+									<div style="display: none;" id="image_container_1">
+										<img src="RES/POPI/FR/scr0.jpg" width="254" height="167"><img src="RES/POPI/FR/scr1.jpg" width="254" height="167"><img src="RES/POPI/FR/scr2.jpg" width="254" height="167">									</div>
+																		
+									<div style="display: none;" id="image_container_2">
+										<img src="RES/SPC5/FR/scr0.jpg" width="254" height="167"><img src="RES/SPC5/FR/scr1.jpg" width="254" height="167"><img src="RES/SPC5/FR/scr2.jpg" width="254" height="167">									</div>
+																		
+									<div style="display: none;" id="image_container_3">
+										<img src="RES/SHFA/FR/scr0.jpg" width="254" height="167"><img src="RES/SHFA/FR/scr1.jpg" width="254" height="167"><img src="RES/SHFA/FR/scr2.jpg" width="254" height="167">									</div>
+																		
+									<div style="display: none;" id="image_container_4">
+										<img src="RES/MASS/FR/scr0.jpg" width="254" height="167"><img src="RES/MASS/FR/scr1.jpg" width="254" height="167"><img src="RES/MASS/FR/scr2.jpg" width="254" height="167">									</div>
+																		
+									<div style="display: none;" id="image_container_5">
+										<img src="RES/IRO2/FR/scr0.jpg" width="254" height="167"><img src="RES/IRO2/FR/scr1.jpg" width="254" height="167"><img src="RES/IRO2/FR/scr2.jpg" width="254" height="167">									</div>
+											
+								</div>
+								<script>
+								fitTextInBox("header_title",28);
+								
+								</script>
+								<a href="#" id="viewLink">
+									<div id="imageMask"><img src="scrBackground.png?version=100" border=0/></div>
+								</a>
+								<a href="#" id="buyLink">
+									<div id="buyButton">
+										<div id="buyText"></div>
+									</div>
+								</a>
+								<a id="videoLink" onClick="followVideo()">
+									<div id="videoButton"><img src="videoButton.png?version=100" border=0/></div>
+								</a>
+							</div>
+							<script>							
+							var strBaseVideoLink='from=UNOG&lg=FR&d=iPhone&t=video&pp=1';
+							var strBaseLink="http://ingameads.gameloft.com/redir/?from=UNOG&lg=FR&d=iPhone";
+							var strBaseViewLink="gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=WN_FR.htm&spec_cat=WN&game=";
+							</script>
+							<script>
+							</script>
+							<div id="separator"></div>
+							<div id="middle_center"><span></span></div>
+							<script>
+							</script>
+							<div id="separator"></div>
+							<div id="middle_bottom">
+								<div style="position:absolute;margin-top:15px;">
+									<div id="container" class="centering">
+										<div id="tray" class="tray"></div>
+									</div>
+								</div>
+								
+								<script type="text/javascript">
+								so_init(true);
+							
+								document.getElementById("backText").innerHTML = backText;
+						
+								document.getElementById("middle_center").innerHTML='<span>' + tblMixes[0].name + '</span>';
+								document.getElementById("buyLink").href=strBaseLink+'&game='+tblMixes[0].code;
+								strVideoLink=strBaseVideoLink+'&game='+tblMixes[0].code;
+								document.getElementById("viewLink").href=strBaseViewLink+tblMixes[0].code+'&position=0';
+								fitTextInBox("middle_center",25);
+								document.getElementById("buyText").innerHTML=tblMixes[0].price;
+								
+								function switchFade(intNumber) {
+									IsVideoButtonPlayed = false;
+									for(var i = 0; i<7; i++) {
+										if(document.getElementById('image_container_'+i)!=undefined) {
+											if(i==intNumber) document.getElementById('image_container_'+i).style.display='block';
+											else document.getElementById('image_container_'+i).style.display='none';
+										}
+									}
+				
+									document.getElementById("middle_center").innerHTML='<span>' + tblMixes[intNumber].name + '</span>';
+									document.getElementById("buyText").innerHTML=tblMixes[intNumber].price;
+									document.getElementById("buyLink").href=strBaseLink+'&game='+tblMixes[intNumber].code;
+									strVideoLink=strBaseVideoLink+'&game='+tblMixes[intNumber].code;
+									document.getElementById("viewLink").href=strBaseViewLink+tblMixes[intNumber].code+'&position='+intNumber;
+									so_init(false);
+									fitTextInBox("middle_center",25);
+								}
+								
+								function showimages(callback){
+								 	var images= [];
+
+									images[0] = "RES/ACPK/FR/splash.jpg";images[1] = "RES/POPI/FR/splash.jpg";images[2] = "RES/SPC5/FR/splash.jpg";images[3] = "RES/SHFA/FR/splash.jpg";images[4] = "RES/MASS/FR/splash.jpg";images[5] = "RES/IRO2/FR/splash.jpg";	
+									callback(images);
+								}
+								
+								window.onorientationchange = function (event) {
+									if (window.orientation == 0) {
+										document.getElementById("container").className="centering portrait";
+									} else {
+										document.getElementById("container").className="centering landscape";		
+									}
+							
+									window.setTimeout( function() { window.scrollTo(0, 0); }, 100 );
+								}
+						</script>
+						</div>
+					</div>
+					
+								<div id="footer">
+					<table cellpadding=0 cellspacing=0 border=0 width='100%' height='100%'>
+						<tr>
+							<td valign="middle" align="center" class="footer_button">
+								<div id="footer_mask">
+																		
+									<table cellpadding=0 cellspacing=0 border=0 width="100%" height="100%" class="menu_off" onClick="location.href='BS_FR.htm'">
+										<tr>
+											<td valign="middle" align="center" height="32"><img src="BS_off.png?version=100" border=0/></td>
+										</tr>
+										<tr>
+											<td valign="middle" align="center" height="12" style="padding-left:2px;">Meill. ventes</td>
+										</tr>
+									</table>
+								</div>	
+							</td>
+							<td valign="middle" align="center" class="footer_button">
+								<div id="footer_mask">
+									<img src="footer_mask.png?version=100" border=0/>									
+									<table cellpadding=0 cellspacing=0 border=0 width="100%" height="100%" class="menu_on" >
+										<tr>
+											<td valign="middle" align="center" height="32"><img src="WN_on.png?version=100" border=0/></td>
+										</tr>
+										<tr>
+											<td valign="middle" align="center" height="12" style="padding-left:2px;">Nouveautés</td>
+										</tr>
+									</table>
+								</div>	
+							</td>
+							<td valign="middle" align="center" class="footer_button">
+								<div id="footer_mask">
+																		<table cellpadding=0 cellspacing=0 border=0 width="100%" height="100%" class="menu_off" onClick="location.href='topdeals_FR.htm'">
+										<tr>
+											<td valign="middle" align="center" height="32"><img src="TOPDEALS_off.png?version=100" border=0/></td>
+										</tr>
+										<tr>
+											<td valign="middle" align="center" height="12" style="padding-left:2px;">Bons Plans</td>
+										</tr>
+									</table>
+								</div>	
+							</td>
+							<td valign="middle" align="center" class="footer_button">
+								<div id="footer_mask">
+																		<table cellpadding=0 cellspacing=0 border=0 width="100%" height="100%" class="menu_off" onClick="location.href='catalog_FR.htm'">
+										<tr>
+											<td valign="middle" align="center" height="32"><img src="PROMO_off.png?version=100" border=0/></td>
+										</tr>
+										<tr>
+											<td valign="middle" align="center" height="12" style="padding-left:2px;">Catalogue</td>
+										</tr>
+									</table>
+								</div>	
+							</td>
+						</tr>	
+					</table>	
+				</div>
+								<div style="display:none; position:absolute; top:700px;" id="videoplayer">
+						<object width="320" height="480">
+							<param name="movie" value="http://www.youtube.com/v/u-D2sMcvYzo&hl=en_US&fs=1&rel=0" id="param_movie"></param>
+								<param name="allowFullScreen" value="true"></param>
+								<param name="allowscriptaccess" value="always"></param>
+								<embed src="" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="320" height="480" id="param_movie_src">
+								</embed>
+						</object>
+					</div>
+					<script>
+						
+					
+					var url = new String (document.location);
+					if(url.lastIndexOf("?")!=-1) {
+						var querystring = url.substring((url.lastIndexOf("?")+1));
+						IsVideoButtonPlayed = true;
+						strLink='http://www.youtube.com/v/'+querystring+'&hl=en_US&fs=1&rel=0';
+						document.getElementById("param_movie").value=strLink;
+						document.getElementById("param_movie_src").src=strLink;
+						document.getElementById("videoplayer").style.display='block';							
+					}
+					</script>
+					</body>
+				</html>
+				<SEPARATOR>
+			<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;">
+		<link rel="stylesheet" href="default.css?version=100"/>
+		<link rel="stylesheet" href="topdeals.css?version=100"/>
+		<script type="text/javascript" src="fittext.js?version=100"></script>
+		<script>
+		document.ontouchmove = function(event){
+	        event.preventDefault();
+	   	}				
+	   	var page = 'topdeals';
+		</script>
+	</head>
+	<body background="tabBackground.png?version=100">
+		<div id="header">
+			<div id="header_image"><img src="top_header.png?version=100" border=0/></div>
+			<div onClick="location.href='http://www.gameloft.com/redir/'">
+				<div id="header_backbutton"><img src="backbutton.png?version=100" border=0/></div>
+			</div>
+			<div id="backText">Préc.</div>
+			<div id="header_title">
+				<table class="header_title_container">
+					<tr>
+						<td valign="middle" align="center">Bons Plans</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+						<script>
+						fitTextInBox("header_title",28);
+						</script>
+		<div id="middle">
+			<iframe src="http://ingameads.gameloft.com/redir/topdeals/?from=UNOG&lg=FR&d=iPhone" id="frame" height="364" width="320">
+			This page requires internet connection.
+			</iframe>
+		</div>
+	</div>	
+	
+				<div id="footer">
+					<table cellpadding=0 cellspacing=0 border=0 width='100%' height='100%'>
+						<tr>
+							<td valign="middle" align="center" class="footer_button">
+								<div id="footer_mask">
+																		
+									<table cellpadding=0 cellspacing=0 border=0 width="100%" height="100%" class="menu_off" onClick="location.href='BS_FR.htm'">
+										<tr>
+											<td valign="middle" align="center" height="32"><img src="BS_off.png?version=100" border=0/></td>
+										</tr>
+										<tr>
+											<td valign="middle" align="center" height="12" style="padding-left:2px;">Meill. ventes</td>
+										</tr>
+									</table>
+								</div>	
+							</td>
+							<td valign="middle" align="center" class="footer_button">
+								<div id="footer_mask">
+																		
+									<table cellpadding=0 cellspacing=0 border=0 width="100%" height="100%" class="menu_off" onClick="location.href='WN_FR.htm'">
+										<tr>
+											<td valign="middle" align="center" height="32"><img src="WN_off.png?version=100" border=0/></td>
+										</tr>
+										<tr>
+											<td valign="middle" align="center" height="12" style="padding-left:2px;">Nouveautés</td>
+										</tr>
+									</table>
+								</div>	
+							</td>
+							<td valign="middle" align="center" class="footer_button">
+								<div id="footer_mask">
+									<img src="footer_mask.png?version=100" border=0/>									<table cellpadding=0 cellspacing=0 border=0 width="100%" height="100%" class="menu_on" >
+										<tr>
+											<td valign="middle" align="center" height="32"><img src="TOPDEALS_on.png?version=100" border=0/></td>
+										</tr>
+										<tr>
+											<td valign="middle" align="center" height="12" style="padding-left:2px;">Bons Plans</td>
+										</tr>
+									</table>
+								</div>	
+							</td>
+							<td valign="middle" align="center" class="footer_button">
+								<div id="footer_mask">
+																		<table cellpadding=0 cellspacing=0 border=0 width="100%" height="100%" class="menu_off" onClick="location.href='catalog_FR.htm'">
+										<tr>
+											<td valign="middle" align="center" height="32"><img src="PROMO_off.png?version=100" border=0/></td>
+										</tr>
+										<tr>
+											<td valign="middle" align="center" height="12" style="padding-left:2px;">Catalogue</td>
+										</tr>
+									</table>
+								</div>	
+							</td>
+						</tr>	
+					</table>	
+				</div>
+				</body>
+</html>
+			<SEPARATOR>
+				<html>
+					<head>
+						<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+						<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;">
+						<script type="text/javascript" src="iscroll.js?version=100"></script>
+						<script type="text/javascript">
+						var myScroll;
+						
+						function loaded() {
+						    setTimeout( function() {
+						        document.addEventListener('touchmove', function(e){ e.preventDefault(); }, false);
+						        myScroll = new iScroll(document.getElementById('scroller'), 'y');
+						    }, 100);
+						}
+						
+						window.addEventListener('load', loaded, true);
+						</script>
+						
+						<style type="text/css" media="all">
+						#wrapper {
+						    position:relative;    /* needed */
+						    z-index:1;            /* needed and important */
+						    width:320px;
+						    height:346px;        /* needed */
+						    overflow:hidden;    /* suggested */
+						    background:#DCDCDC;
+						}
+						
+						#scroller {
+						/*    -webkit-touch-callout:none;*/
+						/*    -webkit-tap-highlight-color:rgba(0,0,0,0);*/
+						/*    position:absolute;    /* optional. Seems to work with absolute, relative and without it */
+						/*    top:0;                /* optional */
+						/*    -webkit-box-shadow:0 0 40px rgba(0,0,0,0.8);*/
+						
+						    float:left;
+						    width:320px;
+						    padding: 0px;
+						    background:#eee;
+						}
+						</style>
+						
+						<link rel="stylesheet" href="default.css?version=100"/>
+						<link rel="stylesheet" href="catalog.css?version=100"/>		
+						<script type="text/javascript" src="rating.js?version=100"></script>
+						<script type="text/javascript" src="fittext.js?version=100"></script>
+					</head>
+					<body background="tabBackground.png?version=100" onLoad="init()">
+						<div id="header">
+							<div id="header_image"><img src="top_header.png?version=100" border=0/></div>
+							<div onClick="location.href='http://www.gameloft.com/redir/'">
+								<div id="header_backbutton"><img src="backbutton.png?version=100" border=0/></div>
+							</div>
+							<div id="backText">Préc.</div>
+							<div id="header_title">
+								<table class="header_title_container">
+									<tr>
+										<td valign="middle" align="center" id="title"><span>Catalogue des jeux</span></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<script>
+						fitTextInBox("header_title",28);
+						</script>
+						<div id="middle">
+							<div id="middle_top">
+								<img src="left_selected.png?version=100" border="0"/>
+								<a href="catalog_FR.htm">
+									<div id="mask_paid">
+										<div id="menu_paid_on">
+											Payants										</div>
+									</div>
+								</a>
+								<a href="catalog_free_FR.htm">
+									<div id="mask_free">
+										<div id="menu_free_off">
+											Gratuits										</div>
+									</div>
+								</a>
+							</div>
+							<div id="separator"></div>
+							<div id="wrapper">
+ 							<div id="scroller">
+							
+							<div id="middle_center">
+								<table cellpadding=0 cellspacing=0 border=0>
+																	<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=SETT&status=PAID&position=0'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/SETT/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">1. The Settlers</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=HAWX&status=PAID&position=1'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/HAWX/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">2. Tom Clancy’s H.A...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=DRVI&status=PAID&position=2'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/DRVI/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">3. Driver™</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=RAY2&status=PAID&position=3'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/RAY2/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">4. Rayman 2: The Gr...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=POPI&status=PAID&position=4'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/POPI/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">5. Prince of Persia...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=BIA2&status=PAID&position=5'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/BIA2/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">6. Brothers In Arms...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=NOVA&status=PAID&position=6'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/NOVA/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">7. N.O.V.A. - Near ...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=ASCR&status=PAID&position=7'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/ASCR/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">8. Assassin's Creed...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=SPC5&status=PAID&position=8'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/SPC5/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">9. Splinter Cell Co...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=ACPK&status=PAID&position=9'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/ACPK/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">10. Gameloft Action ...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=GAN2&status=PAID&position=10'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/GAN2/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">11. Gangstar: West C...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=RF10&status=PAID&position=11'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/RF10/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">12. Real Football 20...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=AVAT&status=PAID&position=12'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/AVAT/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">13. James Cameron's ...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=IRO2&status=PAID&position=13'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/IRO2/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">14. Iron Man 2</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=MASS&status=PAID&position=14'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/MASS/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">15. Zombie Infection</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=BRFI&status=PAID&position=15'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/BRFI/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">16. Fishing Kings</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=BLOK&status=PAID&position=16'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/BLOK/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">17. Blokus ™</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=SAND&status=PAID&position=17'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/SAND/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">18. Modern Combat: S...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=SHKK&status=PAID&position=18'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/SHKK/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">19. Shrek Kart</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=SHFA&status=PAID&position=19'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/SHFA/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">20. SHREK 4, Il Etai...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=REDR&status=PAID&position=20'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/REDR/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">21. GT Racing: Motor...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=ASP5&status=PAID&position=21'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/ASP5/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">22. Asphalt 5</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=DUNQ&status=PAID&position=22'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/DUNQ/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">23. Dungeon Hunter</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=LG09&status=PAID&position=23'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/LG09/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">24. Let's Golf!</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=BAHH&status=PAID&position=24'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/BAHH/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">25. Brothers in arms</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=SPPK&status=PAID&position=25'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/SPPK/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">26. Gameloft Sports ...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=SKAT&status=PAID&position=26'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/SKAT/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">27. Skater Nation</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=SPAW&status=PAID&position=27'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/SPAW/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">28. Hero of Sparta</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=EWJI&status=PAID&position=28'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/EWJI/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">29. Earthworm Jim</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=GRT2&status=PAID&position=29'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/GRT2/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">30. Guitar Rock Tour...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=MCOM&status=PAID&position=30'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/MCOM/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">31. Blades Of Fury</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=TER4&status=PAID&position=31'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/TER4/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">32. Terminator Renai...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=BRBO&status=PAID&position=32'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/BRBO/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">33. Cérébral Challen...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=ASP4&status=PAID&position=33'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/ASP4/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">34. Asphalt 4: Elite...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=TO09&status=PAID&position=34'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/TO09/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">35. Real Tennis 2009</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=FEGT&status=PAID&position=35'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FEGT/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">36. Ferrari GT: Evol...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=MBRC&status=PAID&position=36'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/MBRC/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">37. Cérébral Challen...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=GRTO&status=PAID&position=37'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/GRTO/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">38. Guitar Rock Tour...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=RF09&status=PAID&position=38'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/RF09/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">39. Real Football 20...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=CSIM&status=PAID&position=39'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/CSIM/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">40. Les experts: Mia...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=RIOE&status=PAID&position=40'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/RIOE/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">41. Rise of Lost Emp...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=MYCC&status=PAID&position=41'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/MYCC/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">42. Cooking Coach, j...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=DJMT&status=PAID&position=42'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/DJMT/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">43. DJ MIX TOUR</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=MDPL&status=PAID&position=43'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/MDPL/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">44. Midnight Pool</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=NYN2&status=PAID&position=44'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/NYN2/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">45. New York Nights:...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=CAST&status=PAID&position=45'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/CAST/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">46. Castle Frenzy</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=BLB2&status=PAID&position=46'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/BLB2/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">47. Block Breaker De...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=BUBA&status=PAID&position=47'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/BUBA/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">48. Bubble Bash™</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=CAOF&status=PAID&position=48'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/CAOF/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">49. Castle of Magic</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=BRIB&status=PAID&position=49'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/BRIB/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">50. Bridge Odyssey</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=DBMO&status=PAID&position=50'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/DBMO/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">51. Banker Wars: Pan...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=MNBO&status=PAID&position=51'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/MNBO/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">52. Midnight Bowling...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=SSTR&status=PAID&position=52'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/SSTR/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">53. Siberian Strike™...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=DITW&status=PAID&position=53'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/DITW/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">54. Diamond Twister</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=TVSK&status=PAID&position=54'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/TVSK/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">55. TV Show King Onl...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=WWGU&status=PAID&position=55'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/WWGU/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">56. Wild West Guns</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=CABC&status=PAID&position=56'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/CABC/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">57. Chess Classics</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_FR.htm&spec_cat=PROMO&game=PSOL&status=PAID&position=57'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/PSOL/FR/icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">58. Platinum Solitai...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																</table>
+							</div>
+							</div>
+							</div>
+						</div>
+									<div id="footer">
+					<table cellpadding=0 cellspacing=0 border=0 width='100%' height='100%'>
+						<tr>
+							<td valign="middle" align="center" class="footer_button">
+								<div id="footer_mask">
+																		
+									<table cellpadding=0 cellspacing=0 border=0 width="100%" height="100%" class="menu_off" onClick="location.href='BS_FR.htm'">
+										<tr>
+											<td valign="middle" align="center" height="32"><img src="BS_off.png?version=100" border=0/></td>
+										</tr>
+										<tr>
+											<td valign="middle" align="center" height="12" style="padding-left:2px;">Meill. ventes</td>
+										</tr>
+									</table>
+								</div>	
+							</td>
+							<td valign="middle" align="center" class="footer_button">
+								<div id="footer_mask">
+																		
+									<table cellpadding=0 cellspacing=0 border=0 width="100%" height="100%" class="menu_off" onClick="location.href='WN_FR.htm'">
+										<tr>
+											<td valign="middle" align="center" height="32"><img src="WN_off.png?version=100" border=0/></td>
+										</tr>
+										<tr>
+											<td valign="middle" align="center" height="12" style="padding-left:2px;">Nouveautés</td>
+										</tr>
+									</table>
+								</div>	
+							</td>
+							<td valign="middle" align="center" class="footer_button">
+								<div id="footer_mask">
+																		<table cellpadding=0 cellspacing=0 border=0 width="100%" height="100%" class="menu_off" onClick="location.href='topdeals_FR.htm'">
+										<tr>
+											<td valign="middle" align="center" height="32"><img src="TOPDEALS_off.png?version=100" border=0/></td>
+										</tr>
+										<tr>
+											<td valign="middle" align="center" height="12" style="padding-left:2px;">Bons Plans</td>
+										</tr>
+									</table>
+								</div>	
+							</td>
+							<td valign="middle" align="center" class="footer_button">
+								<div id="footer_mask">
+									<img src="footer_mask.png?version=100" border=0/>									<table cellpadding=0 cellspacing=0 border=0 width="100%" height="100%" class="menu_on" >
+										<tr>
+											<td valign="middle" align="center" height="32"><img src="PROMO_on.png?version=100" border=0/></td>
+										</tr>
+										<tr>
+											<td valign="middle" align="center" height="12" style="padding-left:2px;">Catalogue</td>
+										</tr>
+									</table>
+								</div>	
+							</td>
+						</tr>	
+					</table>	
+				</div>
+								</body>
+				</html>
+				<SEPARATOR>
+				<html>
+					<head>
+						<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+						<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;">
+						<script type="text/javascript" src="iscroll.js?version=100"></script>
+						<script type="text/javascript">
+						var myScroll;
+						
+						function loaded() {
+						    setTimeout( function() {
+						        document.addEventListener('touchmove', function(e){ e.preventDefault(); }, false);
+						        myScroll = new iScroll(document.getElementById('scroller'), 'y');
+						    }, 100);
+						}
+						
+						window.addEventListener('load', loaded, true);
+						</script>
+						
+						<style type="text/css" media="all">
+						#wrapper {
+						    position:relative;    /* needed */
+						    z-index:1;            /* needed and important */
+						    width:320px;
+						    height:346px;        /* needed */
+						    overflow:hidden;    /* suggested */
+						    background:#DCDCDC;
+						}
+						
+						#scroller {
+						/*    -webkit-touch-callout:none;*/
+						/*    -webkit-tap-highlight-color:rgba(0,0,0,0);*/
+						/*    position:absolute;    /* optional. Seems to work with absolute, relative and without it */
+						/*    top:0;                /* optional */
+						/*    -webkit-box-shadow:0 0 40px rgba(0,0,0,0.8);*/
+						
+						    float:left;
+						    width:320px;
+						    padding: 0px;
+						    background:#eee;
+						}
+						</style>
+						
+						<link rel="stylesheet" href="default.css?version=100"/>
+						<link rel="stylesheet" href="catalog.css?version=100"/>		
+						<script type="text/javascript" src="rating.js?version=100"></script>
+						<script type="text/javascript" src="fittext.js?version=100"></script>
+					</head>
+					<body background="tabBackground.png?version=100" onLoad="init()">
+						<div id="header">
+							<div id="header_image"><img src="top_header.png?version=100" border=0/></div>
+							<div onClick="location.href='http://www.gameloft.com/redir/'">
+								<div id="header_backbutton"><img src="backbutton.png?version=100" border=0/></div>
+							</div>
+							<div id="backText">Préc.</div>
+							<div id="header_title">
+								<table class="header_title_container">
+									<tr>
+										<td valign="middle" align="center" id="title"><span>Catalogue des jeux</span></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<script>
+						fitTextInBox("header_title",28);
+						</script>
+						<div id="middle">
+							<div id="middle_top">
+								<img src="right_selected.png?version=100" border="0"/>
+								<a href="catalog_FR.htm">
+									<div id="mask_paid">
+										<div id="menu_paid_off">
+											Payants										</div>
+									</div>
+								</a>
+								<a href="catalog_free_FR.htm">
+									<div id="mask_free">
+										<div id="menu_free_on">
+											Gratuits										</div>
+									</div>
+								</a>
+							</div>
+							<div id="separator"></div>
+							<div id="wrapper">
+ 							<div id="scroller">
+							
+							<div id="middle_center">
+								<table cellpadding=0 cellspacing=0 border=0>
+																	<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E953&status=FREE&position=0'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E953_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">1. The Settlers - G...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=M003&status=FREE&position=1'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/M003_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">2. Tom Clancy's H.A...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=M021&status=FREE&position=2'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/M021_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">3. Driver™ - GRATUI...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=M212&status=FREE&position=3'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/M212_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">4. Rayman 2: The Gr...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E877&status=FREE&position=4'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E877_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">5. Brothers In Arms...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E983&status=FREE&position=5'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E983_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">6. N.O.V.A. - Near ...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E577&status=FREE&position=6'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E577_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">7. Assassin's Creed...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E800&status=FREE&position=7'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E800_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">8. Gangstar : West ...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E823&status=FREE&position=8'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E823_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">9. Real Football 20...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=M002&status=FREE&position=9'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/M002_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">10. James Cameron's ...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=M323&status=FREE&position=10'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/M323_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">11. Iron Man 2 LITE</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=M229&status=FREE&position=11'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/M229_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">12. Fishing Kings GR...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E803&status=FREE&position=12'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E803_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">13. Modern Combat: S...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E919&status=FREE&position=13'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E919_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">14. Shrek Kart™ GRAT...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=M022&status=FREE&position=14'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/M022_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">15. GT Racing: Motor...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E908&status=FREE&position=15'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E908_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">16. Asphalt 5 GRATUI...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E814&status=FREE&position=16'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E814_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">17. Dungeon Hunter -...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E515&status=FREE&position=17'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E515_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">18. Let's Golf! Lite</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E543&status=FREE&position=18'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E543_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">19. Brothers In Arms...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E941&status=FREE&position=19'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E941_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">20. Skater Nation GR...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E503&status=FREE&position=20'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E503_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">21. Hero of Sparta™ ...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E880&status=FREE&position=21'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E880_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">22. Earthworm Jim GR...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E591&status=FREE&position=22'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E591_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">23. Guitar Rock Tour...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E804&status=FREE&position=23'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E804_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">24. Blades of Fury G...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E518&status=FREE&position=24'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E518_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">25. Terminator Renai...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E489&status=FREE&position=25'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E489_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">26. Cérébral Challen...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E604&status=FREE&position=26'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E604_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">27. Real Tennis 2009...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E350&status=FREE&position=27'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E350_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">28. Ferrari GT: Evol...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E712&status=FREE&position=28'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E712_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">29. Cérébral Challen...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E440&status=FREE&position=29'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E440_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">30. Guitar Rock Tour...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E544&status=FREE&position=30'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E544_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">31. Rise of Lost Emp...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E519&status=FREE&position=31'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E519_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">32. Cooking Coach, j...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E536&status=FREE&position=32'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E536_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">33. DJ Mix Tour Grat...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E566&status=FREE&position=33'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E566_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">34. New York Nights:...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E651&status=FREE&position=34'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E651_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">35. Block Breaker De...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E556&status=FREE&position=35'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E556_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">36. Castle Of Magic ...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=M023&status=FREE&position=36'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/M023_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">37. Bridge Odyssey G...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E732&status=FREE&position=37'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E732_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">38. Banker Wars: Pan...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E514&status=FREE&position=38'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E514_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">39. Siberian Strike ...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E568&status=FREE&position=39'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E568_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">40. Diamond Twister ...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																		<tr bgcolor="#DCDCDC" onClick="location.href='gameinformation_FR.htm?from=UNOG&lg=FR&d=iPhone&back=catalog_free_FR.htm&spec_cat=PROMO&game=E371&status=FREE&position=40'">
+										<td class="gameline_logo">
+											<div id="images">
+												<img src="RES/FREE/E371_icon.jpg" border="0" width="57" height="57"/>
+												<img src="mask_icon.png?version=100" class="mask"/>
+											</div>
+										</td>
+										<td class="gameline_info">
+											<div id="texts">
+												<div id="gamename">41. Wild West Guns L...</div>
+												<div id="rating"><img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;<img src="star_off.png?version=100"/>&nbsp;</div>
+												<div id="reviews">0 Avis</div>
+											</div>
+										</td>
+										<td class="gameline_price">
+											Get it!										</td>
+										<td class="gameline_arrow">
+											<img src="upArrow.png?version=100" border="0">
+										</td>
+									</tr>		
+									<tr>
+										<td colspan=4 height=1 bgcolor="#EEEEEE"></td>
+									</tr>	
+																</table>
+							</div>
+							</div>
+							</div>
+						</div>
+									<div id="footer">
+					<table cellpadding=0 cellspacing=0 border=0 width='100%' height='100%'>
+						<tr>
+							<td valign="middle" align="center" class="footer_button">
+								<div id="footer_mask">
+																		
+									<table cellpadding=0 cellspacing=0 border=0 width="100%" height="100%" class="menu_off" onClick="location.href='BS_FR.htm'">
+										<tr>
+											<td valign="middle" align="center" height="32"><img src="BS_off.png?version=100" border=0/></td>
+										</tr>
+										<tr>
+											<td valign="middle" align="center" height="12" style="padding-left:2px;">Meill. ventes</td>
+										</tr>
+									</table>
+								</div>	
+							</td>
+							<td valign="middle" align="center" class="footer_button">
+								<div id="footer_mask">
+																		
+									<table cellpadding=0 cellspacing=0 border=0 width="100%" height="100%" class="menu_off" onClick="location.href='WN_FR.htm'">
+										<tr>
+											<td valign="middle" align="center" height="32"><img src="WN_off.png?version=100" border=0/></td>
+										</tr>
+										<tr>
+											<td valign="middle" align="center" height="12" style="padding-left:2px;">Nouveautés</td>
+										</tr>
+									</table>
+								</div>	
+							</td>
+							<td valign="middle" align="center" class="footer_button">
+								<div id="footer_mask">
+																		<table cellpadding=0 cellspacing=0 border=0 width="100%" height="100%" class="menu_off" onClick="location.href='topdeals_FR.htm'">
+										<tr>
+											<td valign="middle" align="center" height="32"><img src="TOPDEALS_off.png?version=100" border=0/></td>
+										</tr>
+										<tr>
+											<td valign="middle" align="center" height="12" style="padding-left:2px;">Bons Plans</td>
+										</tr>
+									</table>
+								</div>	
+							</td>
+							<td valign="middle" align="center" class="footer_button">
+								<div id="footer_mask">
+									<img src="footer_mask.png?version=100" border=0/>									<table cellpadding=0 cellspacing=0 border=0 width="100%" height="100%" class="menu_on" >
+										<tr>
+											<td valign="middle" align="center" height="32"><img src="PROMO_on.png?version=100" border=0/></td>
+										</tr>
+										<tr>
+											<td valign="middle" align="center" height="12" style="padding-left:2px;">Catalogue</td>
+										</tr>
+									</table>
+								</div>	
+							</td>
+						</tr>	
+					</table>	
+				</div>
+								</body>
+				</html>
+				<SEPARATOR>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;">
+		<script type="text/javascript" src="ajax.js?version=100"></script>
+		<script type="text/javascript" src="iscroll.js?version=100"></script>
+		<script type="text/javascript" src="xfade2.js?version=100"></script>
+		<script type="text/javascript" src="xmlhttp.js?version=100"></script>
+		<link rel="stylesheet" href="xfade2.css?version=100"/>
+		<script type="text/javascript">
+		var myScroll;
+		
+		function loaded() {
+		    setTimeout( function() {
+		        document.addEventListener('touchmove', function(e){ e.preventDefault(); }, false);
+		        myScroll = new iScroll(document.getElementById('scroller'), 'y');
+		    }, 100);
+		}
+
+		function loadScreens() {
+			if(_GET['spec_cat']=='PROMO') {
+				if(_GET['status']=='PAID') {
+			   		document.getElementById('scr0').src=tblMixes[_GET['spec_cat']][_GET['status']][_GET['position']].path+"/scr0.jpg";
+					document.getElementById('scr1').src=tblMixes[_GET['spec_cat']][_GET['status']][_GET['position']].path+"/scr1.jpg";
+					document.getElementById('scr2').src=tblMixes[_GET['spec_cat']][_GET['status']][_GET['position']].path+"/scr2.jpg";
+				} else {
+					for(i in tblMixes[_GET['spec_cat']]['PAID']) {
+						if(tblMixes[_GET['spec_cat']]['PAID'][i].code==tblMixes[_GET['spec_cat']][_GET['status']][_GET['position']].parent) {
+							document.getElementById('scr0').src=tblMixes[_GET['spec_cat']]['PAID'][i].path+"/scr0.jpg";
+							document.getElementById('scr1').src=tblMixes[_GET['spec_cat']]['PAID'][i].path+"/scr1.jpg";
+							document.getElementById('scr2').src=tblMixes[_GET['spec_cat']]['PAID'][i].path+"/scr2.jpg";
+							break;
+						}
+					}
+				}
+			} else {
+		   		document.getElementById('scr0').src=tblMixes[_GET['spec_cat']][_GET['position']].path+"scr0.jpg";
+				document.getElementById('scr1').src=tblMixes[_GET['spec_cat']][_GET['position']].path+"scr1.jpg";
+				document.getElementById('scr2').src=tblMixes[_GET['spec_cat']][_GET['position']].path+"scr2.jpg";
+			}
+			
+			imgs=d.getElementById("imageContainer1").getElementsByTagName("img");
+			for(j=1;j<imgs.length;j++) {
+				imgs[j].xOpacity = 0;
+			}
+
+			imgs[0].style.display = "block";
+			imgs[0].xOpacity = .99;
+		
+			setTimeout(so_xfade,1000);
+		}
+		
+		window.addEventListener('load', loaded, true);
+
+		var url = new String (document.location);
+		var querystring = url.substring((url.lastIndexOf("?")+1));
+		
+		var tblElements = querystring.split("&");
+		var _GET=[];
+		for(var i=0; i<tblElements.length; i++) {
+			strName=tblElements[i].substring(0,tblElements[i].lastIndexOf("="));
+			strValue=tblElements[i].substring((tblElements[i].lastIndexOf("=")+1));
+			_GET[strName]=strValue;
+		}
+		
+		var tblMixes = {"PROMO":{"PAID":[{"code":"SETT","price":"Get it!","reviews":0,"rating":null,"name":"The Settlers","path":"RES/SETT/FR/"},{"code":"HAWX","price":"Get it!","reviews":0,"rating":null,"name":"Tom Clancy\u2019s H.A.W.X","path":"RES/HAWX/FR/"},{"code":"DRVI","price":"Get it!","reviews":0,"rating":null,"name":"Driver\u2122","path":"RES/DRVI/FR/"},{"code":"RAY2","price":"Get it!","reviews":0,"rating":null,"name":"Rayman 2: The Great Escape","path":"RES/RAY2/FR/"},{"code":"POPI","price":"Get it!","reviews":0,"rating":null,"name":"Prince of Persia : L'Ame du Guerrier","path":"RES/POPI/FR/"},{"code":"BIA2","price":"Get it!","reviews":0,"rating":null,"name":"Brothers In Arms\u00ae 2: Global Front","path":"RES/BIA2/FR/"},{"code":"NOVA","price":"Get it!","reviews":0,"rating":null,"name":"N.O.V.A. - Near Orbit Vanguard Alliance","path":"RES/NOVA/FR/"},{"code":"ASCR","price":"Get it!","reviews":0,"rating":null,"name":"Assassin's Creed: Altair's Chronicles","path":"RES/ASCR/FR/"},{"code":"SPC5","price":"Get it!","reviews":0,"rating":null,"name":"Splinter Cell Conviction\u2122","path":"RES/SPC5/FR/"},{"code":"ACPK","price":"Get it!","reviews":0,"rating":null,"name":"Gameloft Action Pack","path":"RES/ACPK/FR/"},{"code":"GAN2","price":"Get it!","reviews":0,"rating":null,"name":"Gangstar: West Coast Hustle","path":"RES/GAN2/FR/"},{"code":"RF10","price":"Get it!","reviews":0,"rating":null,"name":"Real Football 2010","path":"RES/RF10/FR/"},{"code":"AVAT","price":"Get it!","reviews":0,"rating":null,"name":"James Cameron's Avatar","path":"RES/AVAT/FR/"},{"code":"IRO2","price":"Get it!","reviews":0,"rating":null,"name":"Iron Man 2","path":"RES/IRO2/FR/"},{"code":"MASS","price":"Get it!","reviews":0,"rating":null,"name":"Zombie Infection","path":"RES/MASS/FR/"},{"code":"BRFI","price":"Get it!","reviews":0,"rating":null,"name":"Fishing Kings","path":"RES/BRFI/FR/"},{"code":"BLOK","price":"Get it!","reviews":0,"rating":null,"name":"Blokus \u2122","path":"RES/BLOK/FR/"},{"code":"SAND","price":"Get it!","reviews":0,"rating":null,"name":"Modern Combat: Sandstorm","path":"RES/SAND/FR/"},{"code":"SHKK","price":"Get it!","reviews":0,"rating":null,"name":"Shrek Kart","path":"RES/SHKK/FR/"},{"code":"SHFA","price":"Get it!","reviews":0,"rating":null,"name":"SHREK 4, Il Etait Une Fin\u2122 : le jeu ","path":"RES/SHFA/FR/"},{"code":"REDR","price":"Get it!","reviews":0,"rating":null,"name":"GT Racing: Motor Academy","path":"RES/REDR/FR/"},{"code":"ASP5","price":"Get it!","reviews":0,"rating":null,"name":"Asphalt 5","path":"RES/ASP5/FR/"},{"code":"DUNQ","price":"Get it!","reviews":0,"rating":null,"name":"Dungeon Hunter","path":"RES/DUNQ/FR/"},{"code":"LG09","price":"Get it!","reviews":0,"rating":null,"name":"Let's Golf!","path":"RES/LG09/FR/"},{"code":"BAHH","price":"Get it!","reviews":0,"rating":null,"name":"Brothers in arms","path":"RES/BAHH/FR/"},{"code":"SPPK","price":"Get it!","reviews":0,"rating":null,"name":"Gameloft Sports Pack","path":"RES/SPPK/FR/"},{"code":"SKAT","price":"Get it!","reviews":0,"rating":null,"name":"Skater Nation","path":"RES/SKAT/FR/"},{"code":"SPAW","price":"Get it!","reviews":0,"rating":null,"name":"Hero of Sparta","path":"RES/SPAW/FR/"},{"code":"EWJI","price":"Get it!","reviews":0,"rating":null,"name":"Earthworm Jim","path":"RES/EWJI/FR/"},{"code":"GRT2","price":"Get it!","reviews":0,"rating":null,"name":"Guitar Rock Tour 2","path":"RES/GRT2/FR/"},{"code":"MCOM","price":"Get it!","reviews":0,"rating":null,"name":"Blades Of Fury","path":"RES/MCOM/FR/"},{"code":"TER4","price":"Get it!","reviews":0,"rating":null,"name":"Terminator Renaissance","path":"RES/TER4/FR/"},{"code":"BRBO","price":"Get it!","reviews":0,"rating":null,"name":"C\u00e9r\u00e9bral Challenge\u2122","path":"RES/BRBO/FR/"},{"code":"ASP4","price":"Get it!","reviews":0,"rating":null,"name":"Asphalt 4: Elite Racing","path":"RES/ASP4/FR/"},{"code":"TO09","price":"Get it!","reviews":0,"rating":null,"name":"Real Tennis 2009","path":"RES/TO09/FR/"},{"code":"FEGT","price":"Get it!","reviews":0,"rating":null,"name":"Ferrari GT: Evolution","path":"RES/FEGT/FR/"},{"code":"MBRC","price":"Get it!","reviews":0,"rating":null,"name":"C\u00e9r\u00e9bral Challenge 2 : Vos neurones \u00e0 la puissance 2","path":"RES/MBRC/FR/"},{"code":"GRTO","price":"Get it!","reviews":0,"rating":null,"name":"Guitar Rock Tour\u2122","path":"RES/GRTO/FR/"},{"code":"RF09","price":"Get it!","reviews":0,"rating":null,"name":"Real Football 2009","path":"RES/RF09/FR/"},{"code":"CSIM","price":"Get it!","reviews":0,"rating":null,"name":"Les experts: Miami","path":"RES/CSIM/FR/"},{"code":"RIOE","price":"Get it!","reviews":0,"rating":null,"name":"Rise of Lost Empires","path":"RES/RIOE/FR/"},{"code":"MYCC","price":"Get it!","reviews":0,"rating":null,"name":"Cooking Coach, j'aime cuisiner!","path":"RES/MYCC/FR/"},{"code":"DJMT","price":"Get it!","reviews":0,"rating":null,"name":"DJ MIX TOUR","path":"RES/DJMT/FR/"},{"code":"MDPL","price":"Get it!","reviews":0,"rating":null,"name":"Midnight Pool","path":"RES/MDPL/FR/"},{"code":"NYN2","price":"Get it!","reviews":0,"rating":null,"name":"New York Nights: success in the city","path":"RES/NYN2/FR/"},{"code":"CAST","price":"Get it!","reviews":0,"rating":null,"name":"Castle Frenzy","path":"RES/CAST/FR/"},{"code":"BLB2","price":"Get it!","reviews":0,"rating":null,"name":"Block Breaker Deluxe 2","path":"RES/BLB2/FR/"},{"code":"BUBA","price":"Get it!","reviews":0,"rating":null,"name":"Bubble Bash\u2122","path":"RES/BUBA/FR/"},{"code":"CAOF","price":"Get it!","reviews":0,"rating":null,"name":"Castle of Magic","path":"RES/CAOF/FR/"},{"code":"BRIB","price":"Get it!","reviews":0,"rating":null,"name":"Bridge Odyssey","path":"RES/BRIB/FR/"},{"code":"DBMO","price":"Get it!","reviews":0,"rating":null,"name":"Banker Wars: Panique \u00e0 la Maison Blanche","path":"RES/DBMO/FR/"},{"code":"MNBO","price":"Get it!","reviews":0,"rating":null,"name":"Midnight Bowling\u2122","path":"RES/MNBO/FR/"},{"code":"SSTR","price":"Get it!","reviews":0,"rating":null,"name":"Siberian Strike\u2122","path":"RES/SSTR/FR/"},{"code":"DITW","price":"Get it!","reviews":0,"rating":null,"name":"Diamond Twister","path":"RES/DITW/FR/"},{"code":"TVSK","price":"Get it!","reviews":0,"rating":null,"name":"TV Show King Online","path":"RES/TVSK/FR/"},{"code":"WWGU","price":"Get it!","reviews":0,"rating":null,"name":"Wild West Guns","path":"RES/WWGU/FR/"},{"code":"CABC","price":"Get it!","reviews":0,"rating":null,"name":"Chess Classics","path":"RES/CABC/FR/"},{"code":"PSOL","price":"Get it!","reviews":0,"rating":null,"name":"Platinum Solitaire\u2122","path":"RES/PSOL/FR/"}],"FREE":[{"code":"E953","price":"Get it!","reviews":0,"rating":null,"parent":"SETT","name":"The Settlers - GRATUIT","path":"RES/FREE/E953"},{"code":"M003","price":"Get it!","reviews":0,"rating":null,"parent":"HAWX","name":"Tom Clancy's H.A.W.X GRATUIT","path":"RES/FREE/M003"},{"code":"M021","price":"Get it!","reviews":0,"rating":null,"parent":"DRVI","name":"Driver\u2122 - GRATUIT","path":"RES/FREE/M021"},{"code":"M212","price":"Get it!","reviews":0,"rating":null,"parent":"RAY2","name":"Rayman 2: The Great Escape - GRATUIT","path":"RES/FREE/M212"},{"code":"E877","price":"Get it!","reviews":0,"rating":null,"parent":"BIA2","name":"Brothers In Arms\u00ae 2: Global Front GRATUIT","path":"RES/FREE/E877"},{"code":"E983","price":"Get it!","reviews":0,"rating":null,"parent":"NOVA","name":"N.O.V.A. - Near Orbit Vanguard Alliance GRATUIT","path":"RES/FREE/E983"},{"code":"E577","price":"Get it!","reviews":0,"rating":null,"parent":"ASCR","name":"Assassin's Creed\u2122 - Alta\u00efr's Chronicles GRATUIT","path":"RES/FREE/E577"},{"code":"E800","price":"Get it!","reviews":0,"rating":null,"parent":"GAN2","name":"Gangstar : West Coast Hustle - GRATUIT","path":"RES/FREE/E800"},{"code":"E823","price":"Get it!","reviews":0,"rating":null,"parent":"RF10","name":"Real Football 2010 Gratuit","path":"RES/FREE/E823"},{"code":"M002","price":"Get it!","reviews":0,"rating":null,"parent":"AVAT","name":"James Cameron's Avatar LITE","path":"RES/FREE/M002"},{"code":"M323","price":"Get it!","reviews":0,"rating":null,"parent":"IRO2","name":"Iron Man 2 LITE","path":"RES/FREE/M323"},{"code":"M229","price":"Get it!","reviews":0,"rating":null,"parent":"BRFI","name":"Fishing Kings GRATUIT","path":"RES/FREE/M229"},{"code":"E803","price":"Get it!","reviews":0,"rating":null,"parent":"SAND","name":"Modern Combat: Sandstorm FREE","path":"RES/FREE/E803"},{"code":"E919","price":"Get it!","reviews":0,"rating":null,"parent":"SHKK","name":"Shrek Kart\u2122 GRATUIT","path":"RES/FREE/E919"},{"code":"M022","price":"Get it!","reviews":0,"rating":null,"parent":"REDR","name":"GT Racing: Motor Academy GRATUIT","path":"RES/FREE/M022"},{"code":"E908","price":"Get it!","reviews":0,"rating":null,"parent":"ASP5","name":"Asphalt 5 GRATUIT","path":"RES/FREE/E908"},{"code":"E814","price":"Get it!","reviews":0,"rating":null,"parent":"DUNQ","name":"Dungeon Hunter - GRATUIT","path":"RES/FREE/E814"},{"code":"E515","price":"Get it!","reviews":0,"rating":null,"parent":"LG09","name":"Let's Golf! Lite","path":"RES/FREE/E515"},{"code":"E543","price":"Get it!","reviews":0,"rating":null,"parent":"BAHH","name":"Brothers In Arms\u00ae Hour of Heroes GRATUIT","path":"RES/FREE/E543"},{"code":"E941","price":"Get it!","reviews":0,"rating":null,"parent":"SKAT","name":"Skater Nation GRATUIT","path":"RES/FREE/E941"},{"code":"E503","price":"Get it!","reviews":0,"rating":null,"parent":"SPAW","name":"Hero of Sparta\u2122 Lite","path":"RES/FREE/E503"},{"code":"E880","price":"Get it!","reviews":0,"rating":null,"parent":"EWJI","name":"Earthworm Jim GRATUIT","path":"RES/FREE/E880"},{"code":"E591","price":"Get it!","reviews":0,"rating":null,"parent":"GRT2","name":"Guitar Rock Tour 2 GRATUIT","path":"RES/FREE/E591"},{"code":"E804","price":"Get it!","reviews":0,"rating":null,"parent":"MCOM","name":"Blades of Fury GRATUIT","path":"RES/FREE/E804"},{"code":"E518","price":"Get it!","reviews":0,"rating":null,"parent":"TER4","name":"Terminator Renaissance : Le jeu officiel - Version LITE","path":"RES/FREE/E518"},{"code":"E489","price":"Get it!","reviews":0,"rating":null,"parent":"BRBO","name":"C\u00e9r\u00e9bral Challenge\u2122 LITE","path":"RES/FREE/E489"},{"code":"E604","price":"Get it!","reviews":0,"rating":null,"parent":"TO09","name":"Real Tennis 2009 Free","path":"RES/FREE/E604"},{"code":"E350","price":"Get it!","reviews":0,"rating":null,"parent":"FEGT","name":"Ferrari GT: Evolution Trial","path":"RES/FREE/E350"},{"code":"E712","price":"Get it!","reviews":0,"rating":null,"parent":"MBRC","name":"C\u00e9r\u00e9bral Challenge 2 : Vos neurones \u00e0 la puissance 2 ! Version GRATUITE","path":"RES/FREE/E712"},{"code":"E440","price":"Get it!","reviews":0,"rating":null,"parent":"GRTO","name":"Guitar Rock Tour GRATUIT","path":"RES/FREE/E440"},{"code":"E544","price":"Get it!","reviews":0,"rating":null,"parent":"RIOE","name":"Rise of Lost Empires VERSION GRATUITE","path":"RES/FREE/E544"},{"code":"E519","price":"Get it!","reviews":0,"rating":null,"parent":"MYCC","name":"Cooking Coach, j'aime cuisiner ! GRATUIT","path":"RES/FREE/E519"},{"code":"E536","price":"Get it!","reviews":0,"rating":null,"parent":"DJMT","name":"DJ Mix Tour Gratuit","path":"RES/FREE/E536"},{"code":"E566","price":"Get it!","reviews":0,"rating":null,"parent":"NYN2","name":"New York Nights: success in the city VERSION GRATUITE","path":"RES/FREE/E566"},{"code":"E651","price":"Get it!","reviews":0,"rating":null,"parent":"BLB2","name":"Block Breaker Deluxe 2 Version gratuite","path":"RES/FREE/E651"},{"code":"E556","price":"Get it!","reviews":0,"rating":null,"parent":"CAOF","name":"Castle Of Magic GRATUIT","path":"RES/FREE/E556"},{"code":"M023","price":"Get it!","reviews":0,"rating":null,"parent":"BRIB","name":"Bridge Odyssey GRATUIT","path":"RES/FREE/M023"},{"code":"E732","price":"Get it!","reviews":0,"rating":null,"parent":"DBMO","name":"Banker Wars: Panique \u00e0 la Maison Blanche VERSION GRATUITE","path":"RES/FREE/E732"},{"code":"E514","price":"Get it!","reviews":0,"rating":null,"parent":"SSTR","name":"Siberian Strike LITE","path":"RES/FREE/E514"},{"code":"E568","price":"Get it!","reviews":0,"rating":null,"parent":"DITW","name":"Diamond Twister Lite","path":"RES/FREE/E568"},{"code":"E371","price":"Get it!","reviews":0,"rating":null,"parent":"WWGU","name":"Wild West Guns LITE","path":"RES/FREE/E371"}]},"WN":[{"code":"ACPK","price":"Get it!","reviews":0,"rating":null,"name":"Gameloft Action Pack","path":"RES/ACPK/FR/"},{"code":"POPI","price":"Get it!","reviews":0,"rating":null,"name":"Prince of Persia : L'Ame du Guerrier","path":"RES/POPI/FR/"},{"code":"SPC5","price":"Get it!","reviews":0,"rating":null,"name":"Splinter Cell Conviction\u2122","path":"RES/SPC5/FR/"},{"code":"SHFA","price":"Get it!","reviews":0,"rating":null,"name":"SHREK 4, Il Etait Une Fin\u2122 : le jeu ","path":"RES/SHFA/FR/"},{"code":"MASS","price":"Get it!","reviews":0,"rating":null,"name":"Zombie Infection","path":"RES/MASS/FR/"},{"code":"IRO2","price":"Get it!","reviews":0,"rating":null,"name":"Iron Man 2","path":"RES/IRO2/FR/"}],"BS":[{"code":"SETT","price":"Get it!","reviews":0,"rating":null,"name":"The Settlers","path":"RES/SETT/FR/"},{"code":"HAWX","price":"Get it!","reviews":0,"rating":null,"name":"Tom Clancy\u2019s H.A.W.X","path":"RES/HAWX/FR/"},{"code":"DRVI","price":"Get it!","reviews":0,"rating":null,"name":"Driver\u2122","path":"RES/DRVI/FR/"},{"code":"RAY2","price":"Get it!","reviews":0,"rating":null,"name":"Rayman 2: The Great Escape","path":"RES/RAY2/FR/"},{"code":"POPI","price":"Get it!","reviews":0,"rating":null,"name":"Prince of Persia : L'Ame du Guerrier","path":"RES/POPI/FR/"},{"code":"BIA2","price":"Get it!","reviews":0,"rating":null,"name":"Brothers In Arms\u00ae 2: Global Front","path":"RES/BIA2/FR/"}]};
+
+		if(_GET['spec_cat']=='PROMO') {
+			if(_GET['status']=='PAID') {
+				strDescriptionsPathTXT=tblMixes[_GET['spec_cat']][_GET['status']][_GET['position']].path+"gamedescription.txt";
+			} else {
+				strDescriptionsPathTXT = tblMixes[_GET['spec_cat']][_GET['status']][_GET['position']].path+"_gamedescription_"+_GET['lg']+".txt";
+			}
+		} else {
+			strDescriptionsPathTXT=tblMixes[_GET['spec_cat']][_GET['position']].path+"gamedescription.txt";
+		}
+
+		function getTexts(){
+			ajaxpage(strDescriptionsPathTXT, 'middle_center');
+		}
+		
+		var IsVideoButtonPlayed = false;
+		function followVideo() {
+			updateServerData('http://ingameads.gameloft.com/redir/index.php',strVideoLink,'showPlayscreen');
+		}
+		
+		function showPlayscreen(strLink) {
+			strBaseYoutubeLink=strLink.replace('http://www.youtube.com/watch?v=','');
+			location.href='gameinformation_FR.htm?'+querystring+'&link='+strBaseYoutubeLink;
+		}
+		</script>
+		<link rel="stylesheet" href="default.css?version=100"/>
+		<link rel="stylesheet" href="gameinformation.css?version=100"/>
+		<script type="text/javascript" src="rating.js?version=100"></script>
+		<script type="text/javascript" src="fittext.js?version=100"></script>
+	</head>
+	<body background="tabBackground.png?version=100" onload="getTexts()">
+	<div id="header">
+		<div id="header_image"><img src="top_header.png?version=100" border=0/></div>
+		<div onClick="location.href=_GET['back']">
+			<div id="header_backbutton"><img src="backbutton.png?version=100" border=0/></div>
+		</div>
+		<div id="backText">Préc.</div>
+		<div id="header_title">
+			<table class="header_title_container">
+				<tr>
+					<td valign="middle" align="center" id="title"><span>Informations sur le jeu</span></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<script>
+	fitTextInBox("header_title",28);
+	</script>
+	<div id="middle">
+		<div id="middle_top">
+			<table border=0 cellpadding=0 cellspacing=0 width="100%">
+				<tr>
+					<td rowspan=3" width="70" valign="top">
+						<img width=57 height=57 border=0 id="logo_image" style="-webkit-box-reflect:below 1px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.5, transparent), to(white));"/>
+						<div id="logoMask">
+							<img src="mask_icon.png?version=100" border=0  style="-webkit-box-reflect:below 1px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.5, transparent), to(white));"/>
+						</div>				
+					</td>
+					<td id="gamename" colspan="2"></td>
+				</tr>
+				<tr>
+					<td id="rating"></td>
+					<td id="reviews"></td>
+				</tr>
+				<tr>
+					<td valign="top"><a onClick="followVideo()"><img src="videoButton.png?version=100" border=0/></a></td>
+					<td valign="top"><a id="buyLink"><img src="buyButton.png?version=100" border=0/><div id="buyText"></div></a></td>
+				</tr>
+			</table>
+		</div>
+		<div id="wrapper">
+ 		<div id="scroller">
+		<div id="middle_center"></div>
+		<div id="middle_bottom">
+			<div id="imageContainer1">
+				<img id="scr0" src="#" width="254" height="167">
+				<img id="scr1" src="#" width="254" height="167">
+				<img id="scr2" src="#" width="254" height="167">
+			</div>
+		</div>
+		<script>
+		if(_GET['spec_cat']=='PROMO') {
+			if(_GET['status']=='PAID') {
+		   		document.getElementById('logo_image').src=tblMixes[_GET['spec_cat']][_GET['status']][_GET['position']].path+"/icon.jpg";
+			} else {
+				document.getElementById('logo_image').src=tblMixes[_GET['spec_cat']][_GET['status']][_GET['position']].path+'_icon.jpg';
+			}
+			document.getElementById('gamename').innerHTML=tblMixes[_GET['spec_cat']][_GET['status']][_GET['position']].name;
+			document.getElementById('rating').innerHTML=displayRating(tblMixes[_GET['spec_cat']][_GET['status']][_GET['position']].rating);
+			document.getElementById('reviews').innerHTML=tblMixes[_GET['spec_cat']][_GET['status']][_GET['position']].reviews+ ' Avis';
+			document.getElementById('buyText').innerHTML=tblMixes[_GET['spec_cat']][_GET['status']][_GET['position']].price;
+			var strBaseLink="http://ingameads.gameloft.com/redir/?"+querystring.replace('spec_cat=PROMO','ctg=CCTL');
+			var strVideoLink=querystring.replace('spec_cat=PROMO','ctg=CCTL');
+		} else {
+	   		document.getElementById('logo_image').src=tblMixes[_GET['spec_cat']][_GET['position']].path+"/icon.jpg";
+			document.getElementById('gamename').innerHTML=tblMixes[_GET['spec_cat']][_GET['position']].name;
+			document.getElementById('rating').innerHTML=displayRating(tblMixes[_GET['spec_cat']][_GET['position']].rating);
+			document.getElementById('reviews').innerHTML=tblMixes[_GET['spec_cat']][_GET['position']].reviews+ ' Avis';
+			document.getElementById('buyText').innerHTML=tblMixes[_GET['spec_cat']][_GET['position']].price;
+			var strBaseLink="http://ingameads.gameloft.com/redir/?"+querystring;
+			var strVideoLink=querystring;
+		}
+
+		document.getElementById("buyLink").href=strBaseLink;
+		strVideoLink=strVideoLink+'&t=video&pp=1';
+			
+		// init slide with delay
+		setTimeout(loadScreens,2000);
+		</script>
+	</div>	
+	</div>
+	</div>
+		<div id="footer">
+			<table cellpadding=0 cellspacing=0 border=0 width='100%' height='100%'>
+				<tr>
+					<td valign="middle" align="center" class="footer_button">
+						<div id="footer_mask">
+							<img src="footer_mask.png?version=100" border=0 id="mask_BS"/>
+							<table cellpadding=0 cellspacing=0 border=0 width="100%" height="100%" class="menu_off" id="table_BS" onClick="location.href='BS_'+_GET['lg']+'.htm';">
+								<tr>
+									<td valign="middle" align="center" height="32"><img src="BS_off.png?version=100" border=0 id="image_BS"/></td>
+								</tr>
+								<tr>
+									<td valign="middle" align="center" height="12" style="padding-left:2px;">Meill. ventes</td>
+								</tr>
+							</table>
+						</div>	
+					</td>
+					<td valign="middle" align="center" class="footer_button">
+						<div id="footer_mask">
+							<img src="footer_mask.png?version=100" border=0 id="mask_WN"/>
+							<table cellpadding=0 cellspacing=0 border=0 width="100%" height="100%" class="menu_off" id="table_WN" onClick="location.href='WN_'+_GET['lg']+'.htm';">
+								<tr>
+									<td valign="middle" align="center" height="32"><img src="WN_off.png?version=100" border=0 id="image_WN"/></td>
+								</tr>
+								<tr>
+									<td valign="middle" align="center" height="12" style="padding-left:2px;">Nouveautés</td>
+								</tr>
+							</table>
+						</div>	
+					</td>
+					<td valign="middle" align="center" class="footer_button">
+						<div id="footer_mask">
+							<img src="footer_mask.png?version=100" border=0 id="mask_TOPDEALS"/>
+							<table cellpadding=0 cellspacing=0 border=0 width="100%" height="100%" class="menu_off" id="table_TOPDEALS"  onClick="location.href='topdeals_'+_GET['lg']+'.htm';">
+								<tr>
+									<td valign="middle" align="center" height="32"><img src="TOPDEALS_off.png?version=100" border=0 id="image_TOPDEALS"/></td>
+								</tr>
+								<tr>
+									<td valign="middle" align="center" height="12" style="padding-left:2px;">Bons Plans</td>
+								</tr>
+							</table>
+						</div>	
+					</td>
+					<td valign="middle" align="center" class="footer_button">
+						<div id="footer_mask">
+							<img src="footer_mask.png?version=100" border=0 id="mask_PROMO"/>
+							<table cellpadding=0 cellspacing=0 border=0 width="100%" height="100%" class="menu_off" id="table_PROMO"  onClick="location.href='catalog_'+_GET['lg']+'.htm';">
+								<tr>
+									<td valign="middle" align="center" height="32"><img src="PROMO_off.png?version=100" border=0 id="image_PROMO"/></td>
+								</tr>
+								<tr>
+									<td valign="middle" align="center" height="12" style="padding-left:2px;">Catalogue</td>
+								</tr>
+							</table>
+						</div>	
+					</td>
+				</tr>	
+			</table>	
+			<script>
+			tblMenuItems=["BS","WN","TOPDEALS","PROMO"];
+			for(i in tblMenuItems) {
+				if(tblMenuItems[i]==_GET['spec_cat']) {
+					document.getElementById("mask_"+tblMenuItems[i]).style.visibility='visible';
+					document.getElementById("table_"+tblMenuItems[i]).className='menu_on';
+					document.getElementById("image_"+tblMenuItems[i]).src=''+tblMenuItems[i]+'_on.png?version=100';
+					
+				} else {
+					document.getElementById("mask_"+tblMenuItems[i]).style.visibility='hidden';
+				}
+			}
+			</script>
+		</div>
+		<div id="fixed_space"></div>
+		<div style="display:none; position:absolute; top:700px;" id="videoplayer">
+			<object width="320" height="480">
+				<param name="movie" value="http://www.youtube.com/v/u-D2sMcvYzo&hl=en_US&fs=1&rel=0" id="param_movie"></param>
+					<param name="allowFullScreen" value="true"></param>
+					<param name="allowscriptaccess" value="always"></param>
+					<embed src="" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="320" height="480" id="param_movie_src">
+					</embed>
+			</object>
+		</div>
+		<script>
+		if(_GET['link']!=undefined) {
+			IsVideoButtonPlayed = true;
+			strLink='http://www.youtube.com/v/'+_GET['link']+'&hl=en_US&fs=1&rel=0';
+			document.getElementById("param_movie").value=strLink;
+			document.getElementById("param_movie_src").src=strLink;
+			document.getElementById("videoplayer").style.display='block';							
+		}
+		</script>
+	</body>
+</html>
+<SEPARATOR>
+dversion=100
+ 
